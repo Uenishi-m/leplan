@@ -11,9 +11,13 @@ import UIKit
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     
-    var sightlist = ["松島","青葉城跡","瑞鳳殿","仙台駅"]
+    var sightlist = [["name":"仙台駅","latitude": 38.2739452,"longitude":140.8530336],
+                     ["name":"青葉城跡","latitude":38.252796,"longitude":140.8474116],
+                     ["name":"瑞鳳殿","latitude":38.2504786,"longitude":140.8579106],
+                     ["name":"松島","latitude":38.3680527,"longitude":141.0500819]]
+ 
     var label = ["false","false","false","false"]
-    var spots = [String]()
+    var spots = [[String:Any]]()
     
     override func viewDidLoad() {
            super.viewDidLoad()
@@ -31,7 +35,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "mycell", for: indexPath)
-        cell.textLabel!.text = sightlist[indexPath.row]
+        cell.textLabel!.text = sightlist[indexPath.row]["name"] as? String
         return cell
     }
     
@@ -54,7 +58,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
         
         //print(label)
-        var pins = [String]()
+        var pins = [[String:Any]]()
         
         
        

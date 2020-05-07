@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FTJ-Lc-rMW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -65,30 +65,45 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeO-QC-pg5">
-                                <rect key="frame" x="276" y="697" width="46" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="labeiaction:" destination="UdE-5P-77B" eventType="touchUpInside" id="Yvt-kP-Xcf"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="y5P-oM-wE0"/>
                     </view>
-                    <navigationItem key="navigationItem" id="JVh-Kj-i2F"/>
+                    <navigationItem key="navigationItem" id="JVh-Kj-i2F">
+                        <barButtonItem key="rightBarButtonItem" title="詳細" id="u0L-q1-hOE">
+                            <connections>
+                                <action selector="goDetailAction:" destination="UdE-5P-77B" id="0MR-21-CSh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="Map" destination="5ih-7N-BON" id="W9e-aC-3tx"/>
+                        <segue destination="irS-cc-mEI" kind="show" identifier="goDetail" id="9Vh-d1-zQc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Pw-QP-9Qc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1882.608695652174" y="-405.13392857142856"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="hul-ZP-F41">
+            <objects>
+                <viewController id="irS-cc-mEI" customClass="DetailViewController" customModule="leplan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S5E-Fx-eaL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="779-nv-Kjk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fxy-Fw-Wxd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="caI-7h-SYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2728" y="-406"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="FXt-o0-BrI">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fAI-nv-DlR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FTJ-Lc-rMW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="50D-Eb-GRl">
@@ -100,9 +115,23 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lWW-uz-sAa"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fAI-nv-DlR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92.753623188405811" y="-405.13392857142856"/>
+            <point key="canvasLocation" x="1" y="-406"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rqT-jh-oQs">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GtQ-5h-weP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="UpA-hE-Fnd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jBV-ql-3x7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="jZZ-Q6-pCG"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-1103" y="-405"/>
         </scene>
     </scenes>
 </document>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		664CBF6D2463FFDB0041E711 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CBF6C2463FFDB0041E711 /* DetailViewController.swift */; };
+		664CBF6F24646A560041E711 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CBF6E24646A560041E711 /* TitleViewController.swift */; };
 		66EFFBA92438393900072E86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFFBA82438393900072E86 /* AppDelegate.swift */; };
 		66EFFBAB2438393900072E86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFFBAA2438393900072E86 /* SceneDelegate.swift */; };
 		66EFFBAD2438393900072E86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFFBAC2438393900072E86 /* ViewController.swift */; };
@@ -17,6 +19,74 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		664CBEFE24616F780041E711 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		664CBEFF24616F780041E711 /* Combinatorics.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = Combinatorics.xcworkspace; sourceTree = "<group>"; };
+		664CBF0224616F780041E711 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		664CBF0324616F780041E711 /* CombinatoricsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinatoricsTests.swift; sourceTree = "<group>"; };
+		664CBF0424616F780041E711 /* LinuxMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
+		664CBF0624616F780041E711 /* Combinatorics.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Combinatorics.playground; sourceTree = "<group>"; };
+		664CBF0724616F780041E711 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		664CBF0924616F780041E711 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		664CBF0A24616F780041E711 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		664CBF0B24616F780041E711 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		664CBF0E24616F780041E711 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		664CBF0F24616F780041E711 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		664CBF1124616F780041E711 /* travis-prep.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "travis-prep.sh"; sourceTree = "<group>"; };
+		664CBF1224616F780041E711 /* run-repl.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "run-repl.sh"; sourceTree = "<group>"; };
+		664CBF1324616F780041E711 /* ios-prep.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "ios-prep.sh"; sourceTree = "<group>"; };
+		664CBF1424616F780041E711 /* xcode-prep.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "xcode-prep.sh"; sourceTree = "<group>"; };
+		664CBF1524616F780041E711 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		664CBF1824616F780041E711 /* Combinatorics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combinatorics.swift; sourceTree = "<group>"; };
+		664CBF1B24616F780041E711 /* package.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = package.xcworkspace; sourceTree = "<group>"; };
+		664CBF1F24616F780041E711 /* xcschememanagement.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = xcschememanagement.plist; sourceTree = "<group>"; };
+		664CBF2024616F780041E711 /* macOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = macOS.playground; sourceTree = "<group>"; };
+		664CBF2124616F780041E711 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
+		664CBF2324616FE30041E711 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		664CBF2424616FE30041E711 /* Combinatorics.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = Combinatorics.xcworkspace; sourceTree = "<group>"; };
+		664CBF2724616FE30041E711 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		664CBF2824616FE30041E711 /* CombinatoricsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinatoricsTests.swift; sourceTree = "<group>"; };
+		664CBF2924616FE30041E711 /* LinuxMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
+		664CBF2B24616FE30041E711 /* Combinatorics.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Combinatorics.playground; sourceTree = "<group>"; };
+		664CBF2C24616FE30041E711 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		664CBF2E24616FE30041E711 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		664CBF2F24616FE30041E711 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		664CBF3024616FE30041E711 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		664CBF3324616FE30041E711 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		664CBF3424616FE30041E711 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		664CBF3624616FE30041E711 /* travis-prep.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "travis-prep.sh"; sourceTree = "<group>"; };
+		664CBF3724616FE30041E711 /* run-repl.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "run-repl.sh"; sourceTree = "<group>"; };
+		664CBF3824616FE30041E711 /* ios-prep.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "ios-prep.sh"; sourceTree = "<group>"; };
+		664CBF3924616FE30041E711 /* xcode-prep.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "xcode-prep.sh"; sourceTree = "<group>"; };
+		664CBF3A24616FE30041E711 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		664CBF3D24616FE30041E711 /* Combinatorics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combinatorics.swift; sourceTree = "<group>"; };
+		664CBF4024616FE30041E711 /* package.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = package.xcworkspace; sourceTree = "<group>"; };
+		664CBF4424616FE30041E711 /* xcschememanagement.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = xcschememanagement.plist; sourceTree = "<group>"; };
+		664CBF4524616FE30041E711 /* macOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = macOS.playground; sourceTree = "<group>"; };
+		664CBF4624616FE30041E711 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
+		664CBF48246170050041E711 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		664CBF49246170050041E711 /* Combinatorics.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = Combinatorics.xcworkspace; sourceTree = "<group>"; };
+		664CBF4C246170050041E711 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		664CBF4D246170050041E711 /* CombinatoricsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinatoricsTests.swift; sourceTree = "<group>"; };
+		664CBF4E246170050041E711 /* LinuxMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
+		664CBF50246170050041E711 /* Combinatorics.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Combinatorics.playground; sourceTree = "<group>"; };
+		664CBF51246170050041E711 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		664CBF53246170050041E711 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		664CBF54246170050041E711 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		664CBF55246170050041E711 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		664CBF58246170050041E711 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		664CBF59246170050041E711 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		664CBF5B246170050041E711 /* travis-prep.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "travis-prep.sh"; sourceTree = "<group>"; };
+		664CBF5C246170050041E711 /* run-repl.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "run-repl.sh"; sourceTree = "<group>"; };
+		664CBF5D246170050041E711 /* ios-prep.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "ios-prep.sh"; sourceTree = "<group>"; };
+		664CBF5E246170050041E711 /* xcode-prep.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "xcode-prep.sh"; sourceTree = "<group>"; };
+		664CBF5F246170050041E711 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		664CBF62246170050041E711 /* Combinatorics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combinatorics.swift; sourceTree = "<group>"; };
+		664CBF65246170050041E711 /* package.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = package.xcworkspace; sourceTree = "<group>"; };
+		664CBF69246170050041E711 /* xcschememanagement.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = xcschememanagement.plist; sourceTree = "<group>"; };
+		664CBF6A246170050041E711 /* macOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = macOS.playground; sourceTree = "<group>"; };
+		664CBF6B246170050041E711 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
+		664CBF6C2463FFDB0041E711 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		664CBF6E24646A560041E711 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 		66EFFBA52438393900072E86 /* leplan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = leplan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EFFBA82438393900072E86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66EFFBAA2438393900072E86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,11 +109,448 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		664CBEFC24616F770041E711 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF47246170050041E711 /* swift-combinatorics */,
+				664CBF2224616FE30041E711 /* swift-combinatorics */,
+				664CBEFD24616F780041E711 /* swift-combinatorics */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		664CBEFD24616F780041E711 /* swift-combinatorics */ = {
+			isa = PBXGroup;
+			children = (
+				664CBEFE24616F780041E711 /* LICENSE */,
+				664CBEFF24616F780041E711 /* Combinatorics.xcworkspace */,
+				664CBF0024616F780041E711 /* Tests */,
+				664CBF0524616F780041E711 /* iOS */,
+				664CBF0724616F780041E711 /* README.md */,
+				664CBF0824616F780041E711 /* BigCombinatorics */,
+				664CBF0F24616F780041E711 /* .gitignore */,
+				664CBF1024616F780041E711 /* scripts */,
+				664CBF1524616F780041E711 /* Package.swift */,
+				664CBF1624616F780041E711 /* Sources */,
+				664CBF1924616F780041E711 /* .swiftpm */,
+				664CBF2024616F780041E711 /* macOS.playground */,
+				664CBF2124616F780041E711 /* .travis.yml */,
+			);
+			name = "swift-combinatorics";
+			path = "../swift-combinatorics";
+			sourceTree = "<group>";
+		};
+		664CBF0024616F780041E711 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF0124616F780041E711 /* CombinatoricsTests */,
+				664CBF0424616F780041E711 /* LinuxMain.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		664CBF0124616F780041E711 /* CombinatoricsTests */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF0224616F780041E711 /* XCTestManifests.swift */,
+				664CBF0324616F780041E711 /* CombinatoricsTests.swift */,
+			);
+			path = CombinatoricsTests;
+			sourceTree = "<group>";
+		};
+		664CBF0524616F780041E711 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF0624616F780041E711 /* Combinatorics.playground */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		664CBF0824616F780041E711 /* BigCombinatorics */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF0924616F780041E711 /* README.md */,
+				664CBF0A24616F780041E711 /* .gitignore */,
+				664CBF0B24616F780041E711 /* Package.swift */,
+				664CBF0C24616F780041E711 /* Sources */,
+			);
+			path = BigCombinatorics;
+			sourceTree = "<group>";
+		};
+		664CBF0C24616F780041E711 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF0D24616F780041E711 /* BigCombinatorics */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		664CBF0D24616F780041E711 /* BigCombinatorics */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF0E24616F780041E711 /* main.swift */,
+			);
+			path = BigCombinatorics;
+			sourceTree = "<group>";
+		};
+		664CBF1024616F780041E711 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF1124616F780041E711 /* travis-prep.sh */,
+				664CBF1224616F780041E711 /* run-repl.sh */,
+				664CBF1324616F780041E711 /* ios-prep.sh */,
+				664CBF1424616F780041E711 /* xcode-prep.sh */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
+		664CBF1624616F780041E711 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF1724616F780041E711 /* Combinatorics */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		664CBF1724616F780041E711 /* Combinatorics */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF1824616F780041E711 /* Combinatorics.swift */,
+			);
+			path = Combinatorics;
+			sourceTree = "<group>";
+		};
+		664CBF1924616F780041E711 /* .swiftpm */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF1A24616F780041E711 /* xcode */,
+			);
+			path = .swiftpm;
+			sourceTree = "<group>";
+		};
+		664CBF1A24616F780041E711 /* xcode */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF1B24616F780041E711 /* package.xcworkspace */,
+				664CBF1C24616F780041E711 /* xcuserdata */,
+			);
+			path = xcode;
+			sourceTree = "<group>";
+		};
+		664CBF1C24616F780041E711 /* xcuserdata */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF1D24616F780041E711 /* mayu.xcuserdatad */,
+			);
+			path = xcuserdata;
+			sourceTree = "<group>";
+		};
+		664CBF1D24616F780041E711 /* mayu.xcuserdatad */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF1E24616F780041E711 /* xcschemes */,
+			);
+			path = mayu.xcuserdatad;
+			sourceTree = "<group>";
+		};
+		664CBF1E24616F780041E711 /* xcschemes */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF1F24616F780041E711 /* xcschememanagement.plist */,
+			);
+			path = xcschemes;
+			sourceTree = "<group>";
+		};
+		664CBF2224616FE30041E711 /* swift-combinatorics */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF2324616FE30041E711 /* LICENSE */,
+				664CBF2424616FE30041E711 /* Combinatorics.xcworkspace */,
+				664CBF2524616FE30041E711 /* Tests */,
+				664CBF2A24616FE30041E711 /* iOS */,
+				664CBF2C24616FE30041E711 /* README.md */,
+				664CBF2D24616FE30041E711 /* BigCombinatorics */,
+				664CBF3424616FE30041E711 /* .gitignore */,
+				664CBF3524616FE30041E711 /* scripts */,
+				664CBF3A24616FE30041E711 /* Package.swift */,
+				664CBF3B24616FE30041E711 /* Sources */,
+				664CBF3E24616FE30041E711 /* .swiftpm */,
+				664CBF4524616FE30041E711 /* macOS.playground */,
+				664CBF4624616FE30041E711 /* .travis.yml */,
+			);
+			name = "swift-combinatorics";
+			path = "../swift-combinatorics";
+			sourceTree = "<group>";
+		};
+		664CBF2524616FE30041E711 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF2624616FE30041E711 /* CombinatoricsTests */,
+				664CBF2924616FE30041E711 /* LinuxMain.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		664CBF2624616FE30041E711 /* CombinatoricsTests */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF2724616FE30041E711 /* XCTestManifests.swift */,
+				664CBF2824616FE30041E711 /* CombinatoricsTests.swift */,
+			);
+			path = CombinatoricsTests;
+			sourceTree = "<group>";
+		};
+		664CBF2A24616FE30041E711 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF2B24616FE30041E711 /* Combinatorics.playground */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		664CBF2D24616FE30041E711 /* BigCombinatorics */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF2E24616FE30041E711 /* README.md */,
+				664CBF2F24616FE30041E711 /* .gitignore */,
+				664CBF3024616FE30041E711 /* Package.swift */,
+				664CBF3124616FE30041E711 /* Sources */,
+			);
+			path = BigCombinatorics;
+			sourceTree = "<group>";
+		};
+		664CBF3124616FE30041E711 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF3224616FE30041E711 /* BigCombinatorics */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		664CBF3224616FE30041E711 /* BigCombinatorics */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF3324616FE30041E711 /* main.swift */,
+			);
+			path = BigCombinatorics;
+			sourceTree = "<group>";
+		};
+		664CBF3524616FE30041E711 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF3624616FE30041E711 /* travis-prep.sh */,
+				664CBF3724616FE30041E711 /* run-repl.sh */,
+				664CBF3824616FE30041E711 /* ios-prep.sh */,
+				664CBF3924616FE30041E711 /* xcode-prep.sh */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
+		664CBF3B24616FE30041E711 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF3C24616FE30041E711 /* Combinatorics */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		664CBF3C24616FE30041E711 /* Combinatorics */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF3D24616FE30041E711 /* Combinatorics.swift */,
+			);
+			path = Combinatorics;
+			sourceTree = "<group>";
+		};
+		664CBF3E24616FE30041E711 /* .swiftpm */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF3F24616FE30041E711 /* xcode */,
+			);
+			path = .swiftpm;
+			sourceTree = "<group>";
+		};
+		664CBF3F24616FE30041E711 /* xcode */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF4024616FE30041E711 /* package.xcworkspace */,
+				664CBF4124616FE30041E711 /* xcuserdata */,
+			);
+			path = xcode;
+			sourceTree = "<group>";
+		};
+		664CBF4124616FE30041E711 /* xcuserdata */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF4224616FE30041E711 /* mayu.xcuserdatad */,
+			);
+			path = xcuserdata;
+			sourceTree = "<group>";
+		};
+		664CBF4224616FE30041E711 /* mayu.xcuserdatad */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF4324616FE30041E711 /* xcschemes */,
+			);
+			path = mayu.xcuserdatad;
+			sourceTree = "<group>";
+		};
+		664CBF4324616FE30041E711 /* xcschemes */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF4424616FE30041E711 /* xcschememanagement.plist */,
+			);
+			path = xcschemes;
+			sourceTree = "<group>";
+		};
+		664CBF47246170050041E711 /* swift-combinatorics */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF48246170050041E711 /* LICENSE */,
+				664CBF49246170050041E711 /* Combinatorics.xcworkspace */,
+				664CBF4A246170050041E711 /* Tests */,
+				664CBF4F246170050041E711 /* iOS */,
+				664CBF51246170050041E711 /* README.md */,
+				664CBF52246170050041E711 /* BigCombinatorics */,
+				664CBF59246170050041E711 /* .gitignore */,
+				664CBF5A246170050041E711 /* scripts */,
+				664CBF5F246170050041E711 /* Package.swift */,
+				664CBF60246170050041E711 /* Sources */,
+				664CBF63246170050041E711 /* .swiftpm */,
+				664CBF6A246170050041E711 /* macOS.playground */,
+				664CBF6B246170050041E711 /* .travis.yml */,
+			);
+			name = "swift-combinatorics";
+			path = "../swift-combinatorics";
+			sourceTree = "<group>";
+		};
+		664CBF4A246170050041E711 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF4B246170050041E711 /* CombinatoricsTests */,
+				664CBF4E246170050041E711 /* LinuxMain.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		664CBF4B246170050041E711 /* CombinatoricsTests */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF4C246170050041E711 /* XCTestManifests.swift */,
+				664CBF4D246170050041E711 /* CombinatoricsTests.swift */,
+			);
+			path = CombinatoricsTests;
+			sourceTree = "<group>";
+		};
+		664CBF4F246170050041E711 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF50246170050041E711 /* Combinatorics.playground */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		664CBF52246170050041E711 /* BigCombinatorics */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF53246170050041E711 /* README.md */,
+				664CBF54246170050041E711 /* .gitignore */,
+				664CBF55246170050041E711 /* Package.swift */,
+				664CBF56246170050041E711 /* Sources */,
+			);
+			path = BigCombinatorics;
+			sourceTree = "<group>";
+		};
+		664CBF56246170050041E711 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF57246170050041E711 /* BigCombinatorics */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		664CBF57246170050041E711 /* BigCombinatorics */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF58246170050041E711 /* main.swift */,
+			);
+			path = BigCombinatorics;
+			sourceTree = "<group>";
+		};
+		664CBF5A246170050041E711 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF5B246170050041E711 /* travis-prep.sh */,
+				664CBF5C246170050041E711 /* run-repl.sh */,
+				664CBF5D246170050041E711 /* ios-prep.sh */,
+				664CBF5E246170050041E711 /* xcode-prep.sh */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
+		664CBF60246170050041E711 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF61246170050041E711 /* Combinatorics */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		664CBF61246170050041E711 /* Combinatorics */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF62246170050041E711 /* Combinatorics.swift */,
+			);
+			path = Combinatorics;
+			sourceTree = "<group>";
+		};
+		664CBF63246170050041E711 /* .swiftpm */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF64246170050041E711 /* xcode */,
+			);
+			path = .swiftpm;
+			sourceTree = "<group>";
+		};
+		664CBF64246170050041E711 /* xcode */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF65246170050041E711 /* package.xcworkspace */,
+				664CBF66246170050041E711 /* xcuserdata */,
+			);
+			path = xcode;
+			sourceTree = "<group>";
+		};
+		664CBF66246170050041E711 /* xcuserdata */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF67246170050041E711 /* mayu.xcuserdatad */,
+			);
+			path = xcuserdata;
+			sourceTree = "<group>";
+		};
+		664CBF67246170050041E711 /* mayu.xcuserdatad */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF68246170050041E711 /* xcschemes */,
+			);
+			path = mayu.xcuserdatad;
+			sourceTree = "<group>";
+		};
+		664CBF68246170050041E711 /* xcschemes */ = {
+			isa = PBXGroup;
+			children = (
+				664CBF69246170050041E711 /* xcschememanagement.plist */,
+			);
+			path = xcschemes;
+			sourceTree = "<group>";
+		};
 		66EFFB9C2438393900072E86 = {
 			isa = PBXGroup;
 			children = (
 				66EFFBA72438393900072E86 /* leplan */,
 				66EFFBA62438393900072E86 /* Products */,
+				664CBEFC24616F770041E711 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +573,8 @@
 				66EFFBB32438393F00072E86 /* LaunchScreen.storyboard */,
 				66EFFBB62438393F00072E86 /* Info.plist */,
 				66EFFBBC243F892D00072E86 /* MapViewController.swift */,
+				664CBF6C2463FFDB0041E711 /* DetailViewController.swift */,
+				664CBF6E24646A560041E711 /* TitleViewController.swift */,
 			);
 			path = leplan;
 			sourceTree = "<group>";
@@ -143,8 +652,10 @@
 			files = (
 				66EFFBAD2438393900072E86 /* ViewController.swift in Sources */,
 				66EFFBA92438393900072E86 /* AppDelegate.swift in Sources */,
+				664CBF6D2463FFDB0041E711 /* DetailViewController.swift in Sources */,
 				66EFFBAB2438393900072E86 /* SceneDelegate.swift in Sources */,
 				66EFFBBD243F892D00072E86 /* MapViewController.swift in Sources */,
+				664CBF6F24646A560041E711 /* TitleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
