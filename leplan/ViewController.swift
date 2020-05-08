@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     
-    var sightlist = [["name":"仙台駅","latitude": 38.2739452,"longitude":140.8530336],
+    var sightlist = [["name":"仙台駅","latitude":38.2601316 ,"longitude":140.8802488],
                      ["name":"青葉城跡","latitude":38.252796,"longitude":140.8474116],
                      ["name":"瑞鳳殿","latitude":38.2504786,"longitude":140.8579106],
                      ["name":"松島","latitude":38.3680527,"longitude":141.0500819]]
@@ -25,6 +25,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         //tableView.dateSource = self
         //tableView.delegate = self
         //tableView.allowsMultipleSelection = true
+        self.navigationItem.hidesBackButton = true
         
        }
     
