@@ -23,7 +23,7 @@ class TitleViewController: UIViewController {
         //self.view.backgroundColor = UIColor.cyan
         titleLabel.textAlignment=NSTextAlignment.center*/
         self.view.backgroundColor=UIColor(red:245/255, green: 241/255, blue: 228/255, alpha: 1)
-        
+        //self.navigationController?.setNavigationBarHidden(true, animated:false)
         //self.view.addSubview(titleLabel)
         
         timer = Timer.scheduledTimer(timeInterval: 2.0,target: self,selector:#selector(self.changeView),userInfo: nil,repeats: false)
@@ -32,7 +32,7 @@ class TitleViewController: UIViewController {
         //self.view.backgroundColor=UIColor.white
     }
     @objc func changeView() {
-        self.performSegue(withIdentifier: "toTable", sender: nil)                        
+        self.performSegue(withIdentifier: "goStarting", sender: nil)                        
        }
     
 

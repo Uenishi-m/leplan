@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		664CBF6D2463FFDB0041E711 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CBF6C2463FFDB0041E711 /* DetailViewController.swift */; };
 		664CBF6F24646A560041E711 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CBF6E24646A560041E711 /* TitleViewController.swift */; };
+		664CBF91246553470041E711 /* StartingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CBF90246553470041E711 /* StartingViewController.swift */; };
 		66EFFBA92438393900072E86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFFBA82438393900072E86 /* AppDelegate.swift */; };
 		66EFFBAB2438393900072E86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFFBAA2438393900072E86 /* SceneDelegate.swift */; };
 		66EFFBAD2438393900072E86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFFBAC2438393900072E86 /* ViewController.swift */; };
@@ -87,6 +88,7 @@
 		664CBF6B246170050041E711 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
 		664CBF6C2463FFDB0041E711 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		664CBF6E24646A560041E711 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
+		664CBF90246553470041E711 /* StartingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingViewController.swift; sourceTree = "<group>"; };
 		66EFFBA52438393900072E86 /* leplan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = leplan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EFFBA82438393900072E86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66EFFBAA2438393900072E86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -575,6 +577,7 @@
 				66EFFBBC243F892D00072E86 /* MapViewController.swift */,
 				664CBF6C2463FFDB0041E711 /* DetailViewController.swift */,
 				664CBF6E24646A560041E711 /* TitleViewController.swift */,
+				664CBF90246553470041E711 /* StartingViewController.swift */,
 			);
 			path = leplan;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 				66EFFBA92438393900072E86 /* AppDelegate.swift in Sources */,
 				664CBF6D2463FFDB0041E711 /* DetailViewController.swift in Sources */,
 				66EFFBAB2438393900072E86 /* SceneDelegate.swift in Sources */,
+				664CBF91246553470041E711 /* StartingViewController.swift in Sources */,
 				66EFFBBD243F892D00072E86 /* MapViewController.swift in Sources */,
 				664CBF6F24646A560041E711 /* TitleViewController.swift in Sources */,
 			);

@@ -11,9 +11,13 @@ import MapKit
 
 class MapViewController: UIViewController ,MKMapViewDelegate{
     
-    var spots = [[String:Any]]()
+    var spotsfin = [[String:Any]]()
     var routeCoordinates:[CLLocationCoordinate2D]=[]
     var record=[[String:Any]]()
+    var startingpoint:String=""
+    var startCoordinate:CLLocationCoordinate2D=CLLocationCoordinate2D()
+    var spots=[[String:Any]]()
+    var start=[String:Any]()
     
     //二点間の距離を求める
     func Distance(dep:Int,des:Int)->Double{
@@ -23,24 +27,52 @@ class MapViewController: UIViewController ,MKMapViewDelegate{
         return Dep.distance(from: Des)
         
     }
-    /*func perm(head:[String],rest:[String])->[String]{
-        if rest.count == 0{
-            return head
-        }else {
-            var res = [String]()
-            for i in 0...rest.count{
-                var restx = rest
-                var headx = head+restx[i..<i+1]
-                res = res+perm(head:headx, rest:restx)
-            }
-            return res
-        }
-    }*/
     
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+
+    
+        //let myGeocoder: CLGeocoder = CLGeocoder()
+        
+        // 正ジオコーディング開始
+        /*myGeocoder.geocodeAddressString(startingpoint, completionHandler: { (placemarks, error) -> Void in
+
+            for placemark in placemarks! {
+                // locationにplacemark.locationをCLLocationとして代入する
+                let location: CLLocation = placemark.location!
+                print("Latitude: \(location.coordinate.latitude)")
+                print("Longitude: \(location.coordinate.longitude)")
+
+            }
+        })*/
+        
+        /*myGeocoder.geocodeAddressString(startingpoint,completionHandler:{(placemarks,error) in
+                       
+                       if let unwrapPlacemarks = placemarks{
+                           if let firstPlacemark = unwrapPlacemarks.first{
+                               if let location = firstPlacemark.location{
+                                   let targetCoordinate = location.coordinate
+                                self.startCoordinate=targetCoordinate
+                                print("＊＊ジオコーディングtargetcoordinate\(self.startCoordinate)＊＊")
+                            }
+                        }
+            }
+        })
+        print("startingpoint\(startingpoint)")*/
+        
+        
+        //spotsfin配列の最初の要素に出発地点の情報を入れる
+        //spots.append(["name":startingpoint,"latitude":startCoordinate.latitude,"longitude":startCoordinate.longitude])
+        print("start\(start)")
+        spots.append(start)
+        for i in 0..<spotsfin.count{
+            spots.append(spotsfin[i])
+        }
+        print("spots\(spots)")
+
+        
         
         //合計の距離が最も小さいように配列を並び替える
         for i in 0..<spots.count-1{
