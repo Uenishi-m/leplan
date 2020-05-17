@@ -122,7 +122,6 @@
         <!--Title View Controller-->
         <scene sceneID="rqT-jh-oQs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GtQ-5h-weP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController hidesBottomBarWhenPushed="YES" id="UpA-hE-Fnd" customClass="TitleViewController" customModule="leplan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jBV-ql-3x7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -141,6 +140,7 @@
                         <segue destination="vhh-4U-OjW" kind="show" identifier="goStarting" id="znx-Hu-P81"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GtQ-5h-weP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-586" y="-729"/>
         </scene>

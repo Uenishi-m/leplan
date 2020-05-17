@@ -8,8 +8,9 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class MapViewController: UIViewController ,MKMapViewDelegate{
+class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDelegate,UISearchBarDelegate{
     
     var spotsfin = [[String:Any]]()
     var routeCoordinates:[CLLocationCoordinate2D]=[]
@@ -18,6 +19,12 @@ class MapViewController: UIViewController ,MKMapViewDelegate{
     var startCoordinate:CLLocationCoordinate2D=CLLocationCoordinate2D()
     var spots=[[String:Any]]()
     var start=[String:Any]()
+    
+    private let myMapView: MKMapView = MKMapView()
+    private var myButton:UIButton!
+    private var myLocationManager:CLLocationManager!
+    private var mySearchBar:UISearchBar!
+    
     
     //二点間の距離を求める
     func Distance(dep:Int,des:Int)->Double{
@@ -32,39 +39,8 @@ class MapViewController: UIViewController ,MKMapViewDelegate{
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
-    
-        //let myGeocoder: CLGeocoder = CLGeocoder()
         
-        // 正ジオコーディング開始
-        /*myGeocoder.geocodeAddressString(startingpoint, completionHandler: { (placemarks, error) -> Void in
-
-            for placemark in placemarks! {
-                // locationにplacemark.locationをCLLocationとして代入する
-                let location: CLLocation = placemark.location!
-                print("Latitude: \(location.coordinate.latitude)")
-                print("Longitude: \(location.coordinate.longitude)")
-
-            }
-        })*/
-        
-        /*myGeocoder.geocodeAddressString(startingpoint,completionHandler:{(placemarks,error) in
-                       
-                       if let unwrapPlacemarks = placemarks{
-                           if let firstPlacemark = unwrapPlacemarks.first{
-                               if let location = firstPlacemark.location{
-                                   let targetCoordinate = location.coordinate
-                                self.startCoordinate=targetCoordinate
-                                print("＊＊ジオコーディングtargetcoordinate\(self.startCoordinate)＊＊")
-                            }
-                        }
-            }
-        })
-        print("startingpoint\(startingpoint)")*/
-        
-        
-        //spotsfin配列の最初の要素に出発地点の情報を入れる
-        //spots.append(["name":startingpoint,"latitude":startCoordinate.latitude,"longitude":startCoordinate.longitude])
+        //spotsに目的地を追加
         print("start\(start)")
         spots.append(start)
         for i in 0..<spotsfin.count{
@@ -94,13 +70,50 @@ class MapViewController: UIViewController ,MKMapViewDelegate{
         print("並び替えると\(spots)")
     
         // mapViewを生成.
-        let myMapView: MKMapView = MKMapView(frame: self.view.frame)
+        //let myMapView: MKMapView = MKMapView(frame: self.view.frame)
+        myMapView.frame=self.view.frame
 
         // Delegateを設定.
         myMapView.delegate = self
         
         //myMapviewをviewに追加
         self.view.addSubview(myMapView)
+        
+        //Buttonの設定
+        myButton=UIButton(type: .detailDisclosure)
+        let width:CGFloat=150
+        let height:CGFloat=20
+        let x:CGFloat=self.view.bounds.width-width
+        let y:CGFloat=self.view.bounds.height-height*2
+        
+        myButton.frame=CGRect(x: x, y: y, width: width, height: height)
+        myButton.setTitle("現在地を表示", for:.normal)
+        //myButton.backgroundColor=UIColor.white
+        myButton.addTarget(self, action: #selector(ClickButton), for: .touchUpInside)
+        self.view.addSubview(myButton)
+        self.view.bringSubviewToFront(myButton)
+        
+        //searchbarSetting
+        mySearchBar=UISearchBar()
+        mySearchBar.delegate=self
+        mySearchBar.frame=CGRect(x:0,y:0,width:300,height:80)
+        mySearchBar.layer.position=CGPoint(x:self.view.bounds.width/2,y:100)
+        //cancenButton is valid
+        mySearchBar.showsCancelButton=true
+        //bookmarkButton is invalid
+        mySearchBar.showsBookmarkButton=false
+        //style is default
+        mySearchBar.searchBarStyle=UISearchBar.Style.default
+        //title
+        mySearchBar.prompt="Add Destination"
+        //explain
+        mySearchBar.placeholder="Enter here"
+        //cursor,cancelbutton color
+        mySearchBar.tintColor=UIColor.blue
+        mySearchBar.showsSearchResultsButton=false
+        self.view.addSubview(mySearchBar)
+        
+        
         
     
         //全ての地点の座標を生成
@@ -197,7 +210,7 @@ class MapViewController: UIViewController ,MKMapViewDelegate{
                 print(self.record)
                 
                 //mapViewにルートを描画
-                myMapView.addOverlay(route.polyline)
+                self.myMapView.addOverlay(route.polyline)
 
             }
         }
@@ -216,7 +229,43 @@ class MapViewController: UIViewController ,MKMapViewDelegate{
         return routeRenderer
     }
     
-
+    @objc func ClickButton(sender:UIButton){
+        print("button clicked")
+        
+       /* CLLocationManager.locationServicesEnabled()
+        
+        let status = CLLocationManager.authorizationStatus()
+        
+        if(status == CLAuthorizationStatus.notDetermined){
+            
+            myLocationManager.requestWhenInUseAuthorization()
+            
+        }else if(status == CLAuthorizationStatus.authorizedWhenInUse){
+            print("authorizedWhen InUse")
+        }else if(status == CLAuthorizationStatus.restricted){
+            print("restricted")
+        }else if(status == CLAuthorizationStatus.authorizedAlways){
+            print("authorizedAlways")
+        }else{
+            print("not allowed")
+        }
+        
+        myLocationManager.startUpdatingHeading()
+        
+        var nowcoordinate:CLLocationCoordinate2D=myMapView.userLocation.coordinate
+        
+        var nowpin:MKPointAnnotation=MKPointAnnotation()
+        
+        nowpin.coordinate=nowcoordinate
+        nowpin.title="現在地"
+        
+        myMapView.userTrackingMode=MKUserTrackingMode.follow
+        myMapView.userTrackingMode=MKUserTrackingMode.followWithHeading*/
+        
+        
+    }
+    
+   
     @IBAction func goDetailAction(_ sender: Any) {
         performSegue(withIdentifier: "goDetail", sender: nil)
     }
