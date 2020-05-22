@@ -20,11 +20,12 @@
                     <navigationItem key="navigationItem" id="iAj-3U-ggd"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goTable" id="ak1-UI-NxH"/>
+                        <segue destination="UdE-5P-77B" kind="show" identifier="StartingToMap" id="sKA-rS-Vav"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VOG-Ho-TG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-408.69565217391306" y="40.848214285714285"/>
+            <point key="canvasLocation" x="-309" y="60"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -113,7 +114,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="779-nv-Kjk"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fxy-Fw-Wxd"/>
+                    <navigationItem key="navigationItem" id="fxy-Fw-Wxd">
+                        <barButtonItem key="rightBarButtonItem" title="＋ルートを追加" id="fiu-hC-9qe">
+                            <connections>
+                                <action selector="AddRouteAction:" destination="irS-cc-mEI" id="pNr-Qy-WpG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caI-7h-SYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -163,6 +170,9 @@
             <point key="canvasLocation" x="-1568.1159420289857" y="-679.01785714285711"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="sKA-rS-Vav"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="le plan" width="185" height="82"/>
     </resources>
