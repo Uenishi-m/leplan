@@ -23,11 +23,14 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
     var newdestination=""
     var newCoordinate:CLLocationCoordinate2D=CLLocationCoordinate2D()
     var routelist_fin=[MKRoute]()
+    var annotationlist=[MKAnnotation]()
+    
     
     private let myMapView: MKMapView = MKMapView()
     private var myButton:UIButton!
     private var myLocationManager:CLLocationManager!
     private var mySearchBar:UISearchBar!
+    private var homeButton:UIButton!
     
     
     //二点間の距離を求める
@@ -44,8 +47,13 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
         
         super.viewDidLoad()
         
-        print("listfromstarting\(listfromstarting)")
+        self.navigationController?.setNavigationBarHidden(false, animated:false)
+        self.navigationController!.navigationBar.tintColor = UIColor(red:112/255, green: 112/255, blue: 112/255, alpha: 1)
         
+        self.navigationItem.hidesBackButton = true
+        
+        print("listfromstarting\(listfromstarting)")
+        print("list\(list)")
         //spotsに目的地を追加
         print("start\(start)")
         list.append(start)
@@ -70,11 +78,12 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
         let width:CGFloat=150
         let height:CGFloat=20
         let x:CGFloat=self.view.bounds.width-width
-        let y:CGFloat=self.view.bounds.height-height*2
+        let y:CGFloat=self.view.bounds.height-height*6
         
         myButton.frame=CGRect(x: x, y: y, width: width, height: height)
         myButton.setTitle("現在地を表示", for:.normal)
         //myButton.backgroundColor=UIColor.white
+        myButton.setTitleColor(UIColor.gray, for: .normal)
         myButton.addTarget(self, action: #selector(ClickButton), for: .touchUpInside)
         self.view.addSubview(myButton)
         self.view.bringSubviewToFront(myButton)
@@ -99,11 +108,14 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
         mySearchBar.showsSearchResultsButton=false
         self.view.addSubview(mySearchBar)
         
-        
-        
-    
-        
-      /* //合計の距離が最も小さいように配列を並び替える
+        //homebuttonの設定
+        homeButton=UIButton()
+        homeButton.frame=CGRect(x: Int(self.view.bounds.width)-30-70, y: Int(self.view.bounds.height)-30-70, width:70, height: 70)
+        homeButton.setTitle("home", for: .normal)
+        homeButton.addTarget(self, action: #selector(clickHomeButton), for: .touchDown)
+        homeButton.backgroundColor=UIColor.gray
+        self.view.addSubview(homeButton)
+        /* //合計の距離が最も小さいように配列を並び替える
         for i in 0..<spots.count-1{
             
             var min=Distance(dep:i, des:i+1)
@@ -220,12 +232,22 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
 
             }
         }*/
+        if list.isEmpty{
+            print("listisempty")
+        }else{
+            print("listinnotempty\(list)")
+        }
+        //Route(spotslist: list)
         if listfromstarting.isEmpty{
+            print("list\(list)")
             Route(spotslist: list)
         }else{
             Route(spotslist: listfromstarting)
         }
+        //alertsetting()
+        
     }
+    
     
     //ルート描画関数
     func Route(spotslist spot:[[String:Any]]){
@@ -296,8 +318,12 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
         
         let center:CLLocationCoordinate2D=CLLocationCoordinate2D(latitude:(max_latitude+min_latitude)/2 ,longitude:(max_longitude+min_longitude)/2 )
         myMapView.setCenter(center, animated: true)
-        let mySpan:MKCoordinateSpan=MKCoordinateSpan(latitudeDelta: 0.3,longitudeDelta: 0.3)
-        let myRegion:MKCoordinateRegion=MKCoordinateRegion(center: center, span: mySpan)
+        //let mySpan:MKCoordinateSpan=MKCoordinateSpan(latitudeDelta: 0.3,longitudeDelta: 0.3)
+        //let myRegion:MKCoordinateRegion=MKCoordinateRegion(center: center, span: mySpan)
+        let latidelta:CLLocationDegrees = max_latitude-min_latitude+0.01
+        let longdelta:CLLocationDegrees = max_longitude-min_longitude+0.01
+        let mySpan:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latidelta, longitudeDelta: longdelta)
+        let myRegion:MKCoordinateRegion=MKCoordinateRegion(center:center, span: mySpan)
         myMapView.region=myRegion
         print(center)
         print((max_latitude+min_latitude)/2)
@@ -309,6 +335,8 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
             let Pin:MKPointAnnotation=MKPointAnnotation()
             Pin.coordinate=spots[i]["coordinate"] as! CLLocationCoordinate2D
             Pin.title=spots[i]["name"] as? String
+            
+            annotationlist.append(Pin)
             myMapView.addAnnotation(Pin)
         
         }
@@ -329,7 +357,7 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
             myRequest.source=fromItem
             myRequest.destination=toItem
             myRequest.requestsAlternateRoutes=true
-            myRequest.transportType=MKDirectionsTransportType.walking
+            myRequest.transportType=MKDirectionsTransportType.any
             
             //MKDirectionを生成してRequestをセット
             let myDirections:MKDirections=MKDirections(request:myRequest)
@@ -342,6 +370,7 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
                 let route=response!.routes[0] as MKRoute
                 print("\(spots[i]["name"])から\(spots[i+1]["name"])目的地まで\(route.distance/1000)km")
                 print("所要時間：\(Int(route.expectedTravelTime/60))分")
+                print(route.transportType)
                 routelist.append(route)
                 self.routelist_fin=routelist
                 //recordに経路の詳細を記録
@@ -354,6 +383,7 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
                 self.myMapView.addOverlay(route.polyline)
 
             }
+            //alertsetting()
             
         }
 
@@ -378,8 +408,48 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
         routeRenderer.lineWidth = 3.0
 
         // ルートの線の色.
-        routeRenderer.strokeColor = UIColor.red
+        routeRenderer.strokeColor = UIColor(red:112/255, green: 112/255, blue: 112/255, alpha: 1)
         return routeRenderer
+    }
+    
+    var deletetitle:String=""
+    var annotationindex:Int = 0
+    //pinが選択されたときにindexを得る
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        let annotation = view.annotation
+        deletetitle = annotation?.title!! as! String
+        print(deletetitle)
+        if listfromstarting.isEmpty{
+            for i in 0..<list.count{
+                if list[i]["name"] as! String==deletetitle{
+                    annotationindex=i
+                    print("listindex\(annotationindex)")
+                }
+            }
+        }else{
+            for i in 0..<listfromstarting.count{
+                if listfromstarting[i]["name"] as! String==deletetitle{
+                    annotationindex=i
+                    print("listfromstarting\(annotationindex)")
+                }
+            }
+
+        }
+    }
+    //pinの吹き出しに削除ボタンを設定
+    func mapView(_ mapView:MKMapView,viewFor annotation: MKAnnotation) ->MKAnnotationView?{
+        let pinView = MKPinAnnotationView(annotation:annotation , reuseIdentifier:nil )
+        pinView.canShowCallout=true
+        pinView.pinTintColor = UIColor.black
+        deletetitle=annotation.title!!
+        
+        let button2 = UIButton()
+        button2.frame = CGRect(x: 0,y: 0,width: 35,height: 35)
+        button2.setTitle("削除", for: .normal)
+        button2.backgroundColor = UIColor.gray
+        button2.addTarget(self, action: #selector(clickDeleteButton), for: .touchDown)
+        pinView.rightCalloutAccessoryView = button2
+        return pinView
     }
     
     
@@ -400,7 +470,7 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
         newdestination=searchBar.text!
         
         //新目的地のピン設定
-        let newpin:MKPointAnnotation=MKPointAnnotation()
+        let _:MKPointAnnotation=MKPointAnnotation()
 
         //新目的地のジオコーディング
         let myGeocoder: CLGeocoder = CLGeocoder()
@@ -430,6 +500,22 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
         })
         mySearchBar.text=""
         self.view.endEditing(true)
+    }
+    
+    @objc func clickDeleteButton(sender:UIButton){
+        
+        print(deletetitle)
+        if listfromstarting.isEmpty{
+            myMapView.removeAnnotation(annotationlist[annotationindex])
+            list.remove(at: annotationindex)
+            self.remove(removeroutelist: self.routelist_fin)
+            Route(spotslist: list)
+        }else{
+            myMapView.removeAnnotation(annotationlist[annotationindex])
+            listfromstarting.remove(at: annotationindex)
+            self.remove(removeroutelist: self.routelist_fin)
+            Route(spotslist: listfromstarting)
+        }
     }
 
     
@@ -469,6 +555,39 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
         
     }
     
+    //ホームボタンが押されたとき
+    @objc func clickHomeButton(sender:UIButton){
+        /*if listfromstarting.isEmpty{
+            list = [[String:Any]]()
+        }else{
+            listfromstarting = [[String:Any]]()
+        }*/
+        let count = (self.navigationController?.viewControllers.count)! - 2
+        
+        if let previousViewController = self.navigationController?.viewControllers[count] as? HokkaidoViewController {
+            print("fromhokkaido")
+            previousViewController.spots = [[String:Any]]()
+            previousViewController.choosenindexpath = []
+            // viewControlllerAの処理
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? MiyagiViewController {
+            previousViewController.spots = [[String:Any]]()
+            previousViewController.choosenindexpath = []
+            // viewControlllerAの処理
+        }
+        performSegue(withIdentifier: "mapToHome", sender: nil)
+    }
+    
+    func alertsetting(){
+        let alert = UIAlertController(title: "経路を取得できませんでした", message: nil, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(OKAction)
+        if list.count != record.count + 1{
+            present(alert,animated: true)
+        }
+    }
+    
+    
    
     @IBAction func goDetailAction(_ sender: Any) {
         performSegue(withIdentifier: "goDetail", sender: nil)
@@ -481,8 +600,7 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
             
             nextVC.spots = list
             nextVC.records=record
-            
-    }
+        }
     }
     
     

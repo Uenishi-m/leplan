@@ -46,10 +46,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 let location:CLLocation=placemark.location!
                 start=["name":self.startingpoint,"latitude":location.coordinate.latitude,"longitude":location.coordinate.longitude] as [String : Any]
             }
-        })
+        })self.navigationController?.setNavigationBarHidden(true, animated:false)
          
         
         print(start)*/
+        
+        self.navigationController?.setNavigationBarHidden(false, animated:false)
+        self.navigationController!.navigationBar.tintColor = UIColor(red:112/255, green: 112/255, blue: 112/255, alpha: 1)
+        
         let myGeocoder: CLGeocoder = CLGeocoder()
         
         myGeocoder.geocodeAddressString(startingpoint,completionHandler:{(placemarks,error) in
