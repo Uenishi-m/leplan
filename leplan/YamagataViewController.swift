@@ -12,11 +12,13 @@ class YamagataViewController: UIViewController,UITableViewDelegate,UITableViewDa
 
  private var myTableView:UITableView!
     
-    var regionlist = ["仙台市内","その他"]
-    var listfir = [["name":"仙台駅","latitude":38.2601316 ,"longitude":140.8802488],
-    ["name":"青葉城跡","latitude":38.252796,"longitude":140.8474116],
-    ["name":"瑞鳳殿","latitude":38.2504786,"longitude":140.8579106]]
-    var listsec = [["name":"松島","latitude":38.3680527,"longitude":141.0500819]]
+    var regionlist = ["最上","庄内","村山","置賜"]
+    var listfir = [["name":"最上公園","latitude":38.7640446 ,"longitude":128.7599251],
+    ["name":"最上峡芭蕉ライン観光舟下り","latitude":38.7374713,"longitude":140.1470534],
+    ["name":"肘折温泉郷","latitude":38.6495721,"longitude":40.1280374]]
+    var listsec = [["name":"羽黒山","latitude":38.7023724,"longitude":139.9652035],["name":" 致道館","latitude":38.7262,"longitude":139.8242393],["name":"総光寺","latitude":38.859176,"longitude":139.9658743],["name":"鶴岡市立加茂水族館","latitude":38.7616566,"longitude":139.7224791],["name":"山居倉庫","latitude":38.9108815,"longitude":139.8348034]]
+    var listthird = [["name":"銀山温泉","latitude":38.570773,"longitude":140.5231883],["name":"山寺（宝珠山立石寺）","latitude":38.3131193,"longitude":140.4324212]]
+    var listforth = [["name":"上杉神社","latitude":37.9090192,"longitude":140.1018513],["name":"伝国の杜","latitude":37.907561,"longitude":140.1044613],["name":"高畠ワイナリー","latitude":37.9855222,"longitude":140.1480326],]
     var label:[Bool] = []
     var listlist:[Int:[[String:Any]]] = [:]
     var choosenlable:[Bool] = []
@@ -31,7 +33,7 @@ class YamagataViewController: UIViewController,UITableViewDelegate,UITableViewDa
         print("miyagistart\(start)")
         print("miyagispots\(spots)")
         
-        listlist = [0:listfir,1:listsec]
+        listlist = [0:listfir,1:listsec,3:listthird,4:listforth]
         
         for i in 0..<regionlist.count{
             label.append(false)
@@ -76,7 +78,7 @@ class YamagataViewController: UIViewController,UITableViewDelegate,UITableViewDa
        if let controller = viewController as? PrefectureViewController{
            controller.spots = spots
            //spots = [[String:Any]]()
-           controller.miyagichoosenindexpath = choosenindexpath
+           controller.yamagataChoosenindexpath = choosenindexpath
        }
    }
     
@@ -151,6 +153,10 @@ class YamagataViewController: UIViewController,UITableViewDelegate,UITableViewDa
             return listfir.count
         }else if section == 1  && validsections.contains(section){
             return listsec.count
+        }else if section == 2  && validsections.contains(section){
+            return listthird.count
+        }else if section == 3  && validsections.contains(section){
+            return listforth.count
         }else{
             return 0
         }
@@ -172,6 +178,10 @@ class YamagataViewController: UIViewController,UITableViewDelegate,UITableViewDa
             cell.textLabel?.text = listfir[indexPath.row]["name"] as? String
         }else if indexPath.section == 1 && validsections.contains(indexPath.section){
             cell.textLabel?.text = listsec[indexPath.row]["name"] as? String
+        }else if indexPath.section == 2 && validsections.contains(indexPath.section){
+            cell.textLabel?.text = listthird[indexPath.row]["name"] as? String
+        }else if indexPath.section == 3 && validsections.contains(indexPath.section){
+            cell.textLabel?.text = listforth[indexPath.row]["name"] as? String
         }
        
         cell.backgroundColor=UIColor(red:248/255, green: 248/255, blue: 248/255, alpha: 1)

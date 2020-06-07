@@ -76,7 +76,7 @@ class ShizuokaViewController: UIViewController,UITableViewDelegate,UITableViewDa
        if let controller = viewController as? PrefectureViewController{
            controller.spots = spots
            //spots = [[String:Any]]()
-           controller.miyagichoosenindexpath = choosenindexpath
+           controller.shizuokaChoosenindexpath = choosenindexpath
        }
    }
     

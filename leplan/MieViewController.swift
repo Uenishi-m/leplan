@@ -76,7 +76,7 @@ class MieViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
        if let controller = viewController as? PrefectureViewController{
            controller.spots = spots
            //spots = [[String:Any]]()
-           controller.miyagichoosenindexpath = choosenindexpath
+           controller.mieChoosenindexpath = choosenindexpath
        }
    }
     

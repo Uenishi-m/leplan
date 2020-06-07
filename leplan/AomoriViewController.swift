@@ -12,11 +12,17 @@ class AomoriViewController: UIViewController,UITableViewDelegate,UITableViewData
 
      private var myTableView:UITableView!
         
-        var regionlist = ["仙台市内","その他"]
-        var listfir = [["name":"仙台駅","latitude":38.2601316 ,"longitude":140.8802488],
-        ["name":"青葉城跡","latitude":38.252796,"longitude":140.8474116],
-        ["name":"瑞鳳殿","latitude":38.2504786,"longitude":140.8579106]]
-        var listsec = [["name":"松島","latitude":38.3680527,"longitude":141.0500819]]
+        var regionlist = ["津軽","下北","南部"]
+        var listfir = [["name":"ねぶたの家 ワ・ラッセ","latitude":40.8294877 ,"longitude":140.7346629],
+        ["name":"青森県立美術館","latitude":40.807354,"longitude":140.6984913],
+        ["name":"弘前公園","latitude":40.6077107,"longitude":140.4621788],
+        ["name":"浅虫水族館","latitude":40.897504,"longitude":140.8605891],
+        ["name":"立佞武多の館","latitude":40.8109542,"longitude":140.4411462],
+        ["name":"太宰治記念館「斜陽館」","latitude":40.9026375,"longitude":140.4530499],
+        ["name":"津軽三味線会館","latitude":40.9030736,"longitude":140.4519183],
+        ["name":"千畳敷海岸","latitude":40.7678264,"longitude":140.0498574],]
+        var listsec = [["name":"恐山","latitude":41.3083916,"longitude":141.0530363],["name":"仏ヶ浦","latitude":41.3117063,"longitude":140.8020555],["name":"尻屋崎灯台","latitude":41.4093606,"longitude":141.4102197],["name":"大間崎","latitude":41.543875,"longitude":140.9089683]]
+      var listthird = [["name":"種差海岸","latitude":40.4996552,"longitude":141.5884434],["name":"八食センター","latitude":40.5266122,"longitude":141.4509661],["name":"奥入瀬渓流","latitude":40.5645132,"longitude":140.9567031],["name":"十和田市現代美術館","latitude":40.6140962,"longitude":141.206950],["name":"青函連絡船メモリアルシップ","latitude":40.8316936,"longitude":140.7343003],["name":"青森県立三沢航空科学館","latitude":40.708236,"longitude":41.3882953]]
         var label:[Bool] = []
         var listlist:[Int:[[String:Any]]] = [:]
         var choosenlable:[Bool] = []
@@ -31,7 +37,7 @@ class AomoriViewController: UIViewController,UITableViewDelegate,UITableViewData
             print("miyagistart\(start)")
             print("miyagispots\(spots)")
             
-            listlist = [0:listfir,1:listsec]
+            listlist = [0:listfir,1:listsec,3:listthird]
             
             for i in 0..<regionlist.count{
                 label.append(false)
@@ -75,8 +81,9 @@ class AomoriViewController: UIViewController,UITableViewDelegate,UITableViewData
        func navigationController(_ navigationController:UINavigationController,willShow viewController : UIViewController,animated:Bool){
            if let controller = viewController as? PrefectureViewController{
                controller.spots = spots
-               //spots = [[String:Any]]()
-               controller.miyagichoosenindexpath = choosenindexpath
+               spots = [[String:Any]]()
+               controller.aomoriChoosenindexpath = choosenindexpath
+            choosenindexpath = []
            }
        }
         
@@ -151,6 +158,8 @@ class AomoriViewController: UIViewController,UITableViewDelegate,UITableViewData
                 return listfir.count
             }else if section == 1  && validsections.contains(section){
                 return listsec.count
+            }else if section == 2 && validsections.contains(section){
+                return listthird.count
             }else{
                 return 0
             }
@@ -172,6 +181,8 @@ class AomoriViewController: UIViewController,UITableViewDelegate,UITableViewData
                 cell.textLabel?.text = listfir[indexPath.row]["name"] as? String
             }else if indexPath.section == 1 && validsections.contains(indexPath.section){
                 cell.textLabel?.text = listsec[indexPath.row]["name"] as? String
+            }else if indexPath.section == 2 && validsections.contains(indexPath.section){
+                cell.textLabel?.text = listthird[indexPath.row]["name"] as? String
             }
            
             cell.backgroundColor=UIColor(red:248/255, green: 248/255, blue: 248/255, alpha: 1)

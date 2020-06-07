@@ -99,7 +99,7 @@ class DetailViewController: UIViewController {
     }
     
     @objc func clickHomeButton(sender:UIButton){
-        let count = (self.navigationController?.viewControllers.count)! - 2
+        let count = (self.navigationController?.viewControllers.count)! - 3
                
                if let previousViewController = self.navigationController?.viewControllers[count] as? HokkaidoViewController {
                    print("fromhokkaido")
@@ -351,10 +351,10 @@ class DetailViewController: UIViewController {
             print("OK!")
             title = alertTextField.text!
             print(title)
-            //print("保存したい配列\(self.spots)")
+            print("保存したい配列\(self.spots)")
             //self.list.updateValue(title, forKey: "title")
             //self.list.updateValue(self.spots, forKey: "spots")
-            //print(self.list)
+            print(self.list)
             
             //データの保存
             print(type(of: self.spots))

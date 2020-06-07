@@ -12,7 +12,7 @@
             <objects>
                 <viewController storyboardIdentifier="HomeView" id="vhh-4U-OjW" customClass="StartingViewController" customModule="leplan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HEY-1A-2fy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ANb-bP-Xh3"/>
@@ -32,11 +32,11 @@
             <objects>
                 <viewController id="w3b-Rn-svg" customClass="PrefectureViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fSL-pX-Wjg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z6J-mf-AAI">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" id="OCO-by-4eQ">
@@ -125,7 +125,7 @@
             <objects>
                 <viewController id="1dl-rh-V3X" customClass="HokkaidoViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZoS-66-2vD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="pjS-f0-Qmv"/>
@@ -150,7 +150,7 @@
             <objects>
                 <viewController id="ybQ-Nu-30v" customClass="IbaragiViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SXW-Ss-6uk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="muC-TE-NzB"/>
@@ -173,7 +173,7 @@
             <objects>
                 <viewController id="2MH-pe-I2n" customClass="NiigataViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k0j-Ld-ZsS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="wx6-Rh-7ZB"/>
@@ -196,7 +196,7 @@
             <objects>
                 <viewController id="O5B-Tv-du0" customClass="OsakaViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mjP-a8-ePY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="jdg-s7-nZB"/>
@@ -219,7 +219,7 @@
             <objects>
                 <viewController id="wS5-Gz-GJC" customClass="ShimaneViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i3u-BD-SbF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="IHt-ev-Wqx"/>
@@ -242,7 +242,7 @@
             <objects>
                 <viewController id="4dj-SK-WUC" customClass="KagawaViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9hI-Nf-8A1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="t41-FF-dc3"/>
@@ -265,7 +265,7 @@
             <objects>
                 <viewController id="MKb-FJ-L1d" customClass="FukuokaViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TUC-4l-lR8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="TQ0-1F-DWx"/>
@@ -288,7 +288,7 @@
             <objects>
                 <viewController id="1OM-4T-t1I" customClass="SagaViewController" customModule="leplan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GFo-kM-QAZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="d6z-D2-487"/>
@@ -311,7 +311,7 @@
             <objects>
                 <viewController id="rQc-Aw-7Iz" customClass="NagasakiViewController" customModule="leplan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5bt-Pj-ep4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="GPL-cI-3bd"/>
@@ -334,7 +334,7 @@
             <objects>
                 <viewController id="lR8-ob-IrZ" customClass="KumamotoViewController" customModule="leplan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f16-6Z-7bf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="CXP-EQ-shI"/>
@@ -357,7 +357,7 @@
             <objects>
                 <viewController id="36x-J7-0Ly" customClass="OitaViewController" customModule="leplan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aPg-H3-GKO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="1pL-6D-6mG"/>
@@ -380,7 +380,7 @@
             <objects>
                 <viewController id="jb0-Sh-RXc" customClass="MiyazakiViewController" customModule="leplan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LLR-jg-r5U">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Dt2-nl-LJD"/>
@@ -403,7 +403,7 @@
             <objects>
                 <viewController id="8aU-EB-QVp" customClass="KagoshimaViewController" customModule="leplan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s88-HA-tkn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="7g3-F9-AnV"/>
@@ -426,7 +426,7 @@
             <objects>
                 <viewController id="gVh-Cv-A0c" customClass="OkinawaViewController" customModule="leplan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yf4-nR-u4e">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="wpl-27-9dq"/>
@@ -449,7 +449,7 @@
             <objects>
                 <viewController id="yxC-BL-eSI" customClass="TokushimaViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dm6-0Z-GWr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Exl-9L-U4S"/>
@@ -472,7 +472,7 @@
             <objects>
                 <viewController id="8Zp-Gp-et9" customClass="EhimeViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f5s-9U-lyu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="t1K-C2-uKa"/>
@@ -495,7 +495,7 @@
             <objects>
                 <viewController id="cf4-c6-OgB" customClass="KochiViewController" customModule="leplan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mAO-k4-Tdb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="wMv-VA-veN"/>
@@ -518,7 +518,7 @@
             <objects>
                 <viewController id="1sx-1g-IOH" customClass="TtotoriViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dpl-1U-7Se">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="z5Q-8f-NHt"/>
@@ -541,7 +541,7 @@
             <objects>
                 <viewController id="fZf-Of-leW" customClass="OkayamaViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3gG-tS-i34">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="hUH-DV-bCE"/>
@@ -564,7 +564,7 @@
             <objects>
                 <viewController id="1Pt-1W-WcK" customClass="HiroshimaViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kV9-Qv-Vsh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xq5-c0-coK"/>
@@ -587,7 +587,7 @@
             <objects>
                 <viewController id="5tc-0k-Bmc" customClass="YamaguchiViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IEP-ZN-KW2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="2pL-wf-ZPo"/>
@@ -610,7 +610,7 @@
             <objects>
                 <viewController id="Vq5-c1-8qU" customClass="KyotoViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VOU-YP-wFf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="1WP-ww-9cH"/>
@@ -633,7 +633,7 @@
             <objects>
                 <viewController id="ZiT-EP-vNU" customClass="HyogoViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dx6-Er-ZN7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="dFT-KI-DAJ"/>
@@ -656,7 +656,7 @@
             <objects>
                 <viewController id="hxE-wg-sXU" customClass="NaraViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T6a-yl-OjB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="B9A-Jc-Wgo"/>
@@ -679,7 +679,7 @@
             <objects>
                 <viewController id="ymm-UR-fix" customClass="MieViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ThC-yz-sf6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="fc5-W1-hvr"/>
@@ -702,7 +702,7 @@
             <objects>
                 <viewController id="o7G-0x-cts" customClass="ShigaViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oVH-vr-IlT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="FrY-wV-UgG"/>
@@ -725,7 +725,7 @@
             <objects>
                 <viewController id="Bzz-nt-ZrK" customClass="WakayamaViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C7N-Ta-LAl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="b92-SE-WCf"/>
@@ -748,7 +748,7 @@
             <objects>
                 <viewController id="HYn-pq-4ey" customClass="ToyamaViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="243-wy-zRn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="keJ-lF-vpE"/>
@@ -771,7 +771,7 @@
             <objects>
                 <viewController id="geX-P5-1zI" customClass="IshikawaViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="50m-2q-INz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="pd8-DE-vR9"/>
@@ -794,7 +794,7 @@
             <objects>
                 <viewController id="RDY-F5-9tl" customClass="FukuiViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CId-fC-Afk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="NOu-Tq-QLJ"/>
@@ -817,7 +817,7 @@
             <objects>
                 <viewController id="vtO-hu-Vwt" customClass="YamanashiViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4HN-O2-5wt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="5Al-31-nRy"/>
@@ -840,7 +840,7 @@
             <objects>
                 <viewController id="G5y-pt-N4f" customClass="NaganoViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JuX-gp-8tO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="D8R-jI-ZGG"/>
@@ -863,7 +863,7 @@
             <objects>
                 <viewController id="DV6-bi-leL" customClass="GifuViewController" customModule="leplan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NXe-nh-t0A">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ky6-yT-CfA"/>
@@ -886,7 +886,7 @@
             <objects>
                 <viewController id="H3m-Qp-um9" customClass="ShizuokaViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZBU-yq-f1K">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="5Zl-TI-Vn9"/>
@@ -909,7 +909,7 @@
             <objects>
                 <viewController id="a9Z-jq-1G9" customClass="AichiViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ddL-FE-rVi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="QQD-pW-7hf"/>
@@ -932,7 +932,7 @@
             <objects>
                 <viewController id="Ems-UM-ek6" customClass="GunmaViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hDt-Aq-xd1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="eV1-7h-5jM"/>
@@ -955,7 +955,7 @@
             <objects>
                 <viewController id="cpR-lC-T4M" customClass="SaitamaViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0ge-43-4Wr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="m4m-9n-wBZ"/>
@@ -978,7 +978,7 @@
             <objects>
                 <viewController id="Qh2-Yi-5R1" customClass="ChibaViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XyW-R7-U9e">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="idU-kh-hDF"/>
@@ -1001,7 +1001,7 @@
             <objects>
                 <viewController id="NlU-6r-cnu" customClass="TokyoViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fbR-lZ-1vg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="pxV-OD-PX8"/>
@@ -1024,7 +1024,7 @@
             <objects>
                 <viewController id="QBg-Ty-7dt" customClass="KanagawaViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ovb-UI-wFd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="MDd-pK-0Ff"/>
@@ -1047,7 +1047,7 @@
             <objects>
                 <viewController id="QTT-gK-VM7" customClass="MiyagiViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KnC-pb-Znc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ixb-DT-ldN"/>
@@ -1072,7 +1072,7 @@
             <objects>
                 <viewController id="NMK-20-lpw" customClass="AomoriViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nth-UY-JT7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Akl-xS-X3z"/>
@@ -1095,7 +1095,7 @@
             <objects>
                 <viewController id="WZT-Qw-Xyw" customClass="AkitaViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cG1-xK-Zl4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="WHo-zP-qup"/>
@@ -1118,7 +1118,7 @@
             <objects>
                 <viewController id="rIa-uB-i5x" customClass="YamagataViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OQm-bT-XK7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="GZx-6Y-2OR"/>
@@ -1141,7 +1141,7 @@
             <objects>
                 <viewController id="7xX-vU-bBh" customClass="FukushimaViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wcX-i3-a8P">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="nR0-Fc-14L"/>
@@ -1164,7 +1164,7 @@
             <objects>
                 <viewController id="alC-3c-xOr" customClass="IwateViewController" customModule="leplan" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z36-7n-cgv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="g3m-AX-hBO"/>
@@ -1187,7 +1187,7 @@
             <objects>
                 <viewController id="UdE-5P-77B" customClass="MapViewController" customModule="leplan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UFr-Zm-3cj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5ih-7N-BON">
@@ -1219,7 +1219,7 @@
             <objects>
                 <viewController id="irS-cc-mEI" customClass="DetailViewController" customModule="leplan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S5E-Fx-eaL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="779-nv-Kjk"/>
@@ -1279,6 +1279,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="onw-DY-sgz"/>
-        <segue reference="znx-Hu-P81"/>
+        <segue reference="9vb-qu-dnu"/>
     </inferredMetricsTieBreakers>
 </document>

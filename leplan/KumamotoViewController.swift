@@ -76,7 +76,7 @@ class KumamotoViewController: UIViewController,UITableViewDelegate,UITableViewDa
        if let controller = viewController as? PrefectureViewController{
            controller.spots = spots
            //spots = [[String:Any]]()
-           controller.miyagichoosenindexpath = choosenindexpath
+           controller.kumamotoChoosenindexpath = choosenindexpath
        }
    }
     

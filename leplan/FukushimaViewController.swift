@@ -12,11 +12,13 @@ class FukushimaViewController: UIViewController,UITableViewDelegate,UITableViewD
 
  private var myTableView:UITableView!
     
-    var regionlist = ["仙台市内","その他"]
-    var listfir = [["name":"仙台駅","latitude":38.2601316 ,"longitude":140.8802488],
-    ["name":"青葉城跡","latitude":38.252796,"longitude":140.8474116],
-    ["name":"瑞鳳殿","latitude":38.2504786,"longitude":140.8579106]]
-    var listsec = [["name":"松島","latitude":38.3680527,"longitude":141.0500819]]
+    var regionlist = ["浜通り","中通り","会津地方"]
+    var listfir = [["name":"相馬野馬追祭場地","latitude":37.6827331 ,"longitude":140.6714306],
+    ["name":"常夏の楽園スパリゾートハワイアンズ","latitude":36.9935302,"longitude":140.8134751],
+    ["name":"アクアマリンふくしま","latitude":36.9427584,"longitude":140.8992428],
+    ["name":"いわき市石炭・化石館","latitude":37.012636,"longitude":140.8462233]]
+    var listsec = [["name":"あぶくま洞","latitude":37.3442655,"longitude":140.6715589,],["name":"三春滝桜","latitude":37.407684,"longitude":140.4978945],["name":"安達太良山","latitude":37.6211166,"longitude":140.2528416],["name":"浄土平","latitude":37.5355946,"longitude":139.9477597],["name":" 岳温泉","latitude":37.6026164,"longitude":140.3213749]]
+    var listthird = [["name":"五色沼","latitude":37.6508452,"longitude":140.0709813],["name":"飯盛山","latitude":37.5035662,"longitude":139.9210737],["name":"鶴ヶ城","latitude":37.487824,"longitude":139.9274824],["name":"大内宿","latitude":37.3340236,"longitude":139.8589989],["name":"塔のへつり","latitude":37.2740666,"longitude":139.9044886],["name":"喜多方ラーメン館 ","latitude":37.650797,"longitude":139.8733956],["name":"会津武家屋敷","latitude":37.4852157,"longitude":139.9514908]]
     var label:[Bool] = []
     var listlist:[Int:[[String:Any]]] = [:]
     var choosenlable:[Bool] = []
@@ -31,7 +33,7 @@ class FukushimaViewController: UIViewController,UITableViewDelegate,UITableViewD
         print("miyagistart\(start)")
         print("miyagispots\(spots)")
         
-        listlist = [0:listfir,1:listsec]
+        listlist = [0:listfir,1:listsec,2:listthird]
         
         for i in 0..<regionlist.count{
             label.append(false)
@@ -76,7 +78,7 @@ class FukushimaViewController: UIViewController,UITableViewDelegate,UITableViewD
        if let controller = viewController as? PrefectureViewController{
            controller.spots = spots
            //spots = [[String:Any]]()
-           controller.miyagichoosenindexpath = choosenindexpath
+           controller.fukushimaChoosenindexpath = choosenindexpath
        }
    }
     
@@ -151,6 +153,8 @@ class FukushimaViewController: UIViewController,UITableViewDelegate,UITableViewD
             return listfir.count
         }else if section == 1  && validsections.contains(section){
             return listsec.count
+        }else if section == 2  && validsections.contains(section){
+            return listthird.count
         }else{
             return 0
         }
@@ -172,6 +176,8 @@ class FukushimaViewController: UIViewController,UITableViewDelegate,UITableViewD
             cell.textLabel?.text = listfir[indexPath.row]["name"] as? String
         }else if indexPath.section == 1 && validsections.contains(indexPath.section){
             cell.textLabel?.text = listsec[indexPath.row]["name"] as? String
+        }else if indexPath.section == 2 && validsections.contains(indexPath.section){
+            cell.textLabel?.text = listthird[indexPath.row]["name"] as? String
         }
        
         cell.backgroundColor=UIColor(red:248/255, green: 248/255, blue: 248/255, alpha: 1)

@@ -31,6 +31,50 @@ class PrefectureViewController: UIViewController,UITableViewDelegate,UITableView
     var spotsfin = [[String:Any]] ()
     var hokkaidochoosenindexpath = [IndexPath]()
     var miyagichoosenindexpath = [IndexPath]()
+    var aomoriChoosenindexpath = [IndexPath]()
+    var akitaChoosenindexpath = [IndexPath]()
+    var yamagataChoosenindexpath = [IndexPath]()
+    var fukushimaChoosenindexpath = [IndexPath]()
+    var iwateChoosenindexpath = [IndexPath]()
+    var ibaragiChoosenindexpath = [IndexPath]()
+    var gunmaChoosenindexpath = [IndexPath]()
+    var saitamaChoosenindexpath = [IndexPath]()
+    var chibaChoosenindexpath = [IndexPath]()
+    var tokyoChoosenindexpath = [IndexPath]()
+    var kanagawaChoosenindexpath = [IndexPath]()
+    var niigataChoosenindexpath = [IndexPath]()
+    var toyamaChoosenindexpath = [IndexPath]()
+    var ishikawaChoosenindexpath = [IndexPath]()
+    var fukuiChoosenindexpath = [IndexPath]()
+    var yamanashiChoosenindexpath = [IndexPath]()
+    var naganoChoosenindexpath = [IndexPath]()
+    var gifuChoosenindexpath = [IndexPath]()
+    var shizuokaChoosenindexpath = [IndexPath]()
+    var aichiChoosenindexpath = [IndexPath]()
+    var osakaChoosenindexpath = [IndexPath]()
+    var kyotoChoosenindexpath = [IndexPath]()
+    var hyogoChoosenindexpath = [IndexPath]()
+    var naraChoosenindexpath = [IndexPath]()
+    var mieChoosenindexpath = [IndexPath]()
+    var shigaChoosenindexpath = [IndexPath]()
+    var wakayamaChoosenindexpath = [IndexPath]()
+    var shimaneChoosenindexpath = [IndexPath]()
+    var ttotoriChoosenindexpath = [IndexPath]()
+    var okayamaChoosenindexpath = [IndexPath]()
+    var hiroshimaChoosenindexpath = [IndexPath]()
+    var yamaguchiChoosenindexpath = [IndexPath]()
+    var kagawaChoosenindexpath = [IndexPath]()
+    var tokushimaChoosenindexpath = [IndexPath]()
+    var ehimeChoosenindexpath = [IndexPath]()
+    var kochiChoosenindexpath = [IndexPath]()
+    var fukuokaChoosenindexpath = [IndexPath]()
+    var sagaChoosenindexpath = [IndexPath]()
+    var nagasakiChoosenindexpath = [IndexPath]()
+    var kumamotoChoosenindexpath = [IndexPath]()
+    var oitaChoosenindexpath = [IndexPath]()
+    var miyazakiChoosenindexpath = [IndexPath]()
+    var kagoshimaChoosenindexpath = [IndexPath]()
+    var okinawaChoosenindexpath = [IndexPath]()
     var preVC:UIViewController = UIViewController()
     
     var startCoordinate:CLLocationCoordinate2D=CLLocationCoordinate2D()
@@ -337,308 +381,309 @@ class PrefectureViewController: UIViewController,UITableViewDelegate,UITableView
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = aomoriChoosenindexpath
         }else if segue.identifier == "toAkita"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! AkitaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = akitaChoosenindexpath
         }else if segue.identifier == "toYamagata"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! YamagataViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = yamagataChoosenindexpath
         }else if segue.identifier == "toFukushima"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! FukushimaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = fukushimaChoosenindexpath
         }else if segue.identifier == "toIwate"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! IwateViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = iwateChoosenindexpath
         }else if segue.identifier == "toIbaragi"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! IbaragiViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = ibaragiChoosenindexpath
         }else if segue.identifier == "toGunma"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! GunmaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            
+            nextVC.choosenindexpath = gunmaChoosenindexpath
         }else if segue.identifier == "toSaitama"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! SaitamaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = saitamaChoosenindexpath
         }else if segue.identifier == "toChiba"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! ChibaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = chibaChoosenindexpath
         }else if segue.identifier == "toTokyo"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! TokyoViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = tokyoChoosenindexpath
         }else if segue.identifier == "toKanagawa"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! KanagawaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = kanagawaChoosenindexpath
         }else if segue.identifier == "toNiigata"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! NiigataViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = niigataChoosenindexpath
         }else if segue.identifier == "toToyama"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! ToyamaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = toyamaChoosenindexpath
         }else if segue.identifier == "toIshikawa"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! IshikawaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = ishikawaChoosenindexpath
         }else if segue.identifier == "toFukui"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! FukuiViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = fukuiChoosenindexpath
         }else if segue.identifier == "toYamanashi"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! YamanashiViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = yamanashiChoosenindexpath
         }else if segue.identifier == "toNagano"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! NaganoViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = naganoChoosenindexpath
         }else if segue.identifier == "toGifu"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! GifuViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = gifuChoosenindexpath
         }else if segue.identifier == "toShizuoka"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! ShizuokaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = shizuokaChoosenindexpath
         }else if segue.identifier == "toAichi"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! AichiViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = aichiChoosenindexpath
         }else if segue.identifier == "toOsaka"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! OsakaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = osakaChoosenindexpath
         }else if segue.identifier == "toKyoto"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! KyotoViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = kyotoChoosenindexpath
         }else if segue.identifier == "toHyogo"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! HyogoViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = hyogoChoosenindexpath
         }else if segue.identifier == "toNara"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! NaraViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = naraChoosenindexpath
         }else if segue.identifier == "toMie"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! MieViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = mieChoosenindexpath
         }else if segue.identifier == "toShiga"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! ShigaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = shigaChoosenindexpath
         }else if segue.identifier == "toWakayama"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! WakayamaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = wakayamaChoosenindexpath
         }else if segue.identifier == "toShimane"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! ShimaneViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = shimaneChoosenindexpath
         }else if segue.identifier == "toTtotori"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! TtotoriViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = ttotoriChoosenindexpath
         }else if segue.identifier == "toOkayama"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! OkayamaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = okayamaChoosenindexpath
         }else if segue.identifier == "toHiroshima"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! HiroshimaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = hiroshimaChoosenindexpath
         }else if segue.identifier == "toYamaguchi"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! YamaguchiViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = yamaguchiChoosenindexpath
         }else if segue.identifier == "toKagawa"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! KagawaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = kagawaChoosenindexpath
         }else if segue.identifier == "toTokushima"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! TokushimaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = tokushimaChoosenindexpath
         }else if segue.identifier == "toEhime"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! EhimeViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = ehimeChoosenindexpath
         }else if segue.identifier == "toKochi"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! KochiViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = kochiChoosenindexpath
         }else if segue.identifier == "toFukuoka"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! FukuokaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = fukuokaChoosenindexpath
         }else if segue.identifier == "toSaga"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! SagaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = sagaChoosenindexpath
         }else if segue.identifier == "toNagasaki"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! NagasakiViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = nagasakiChoosenindexpath
         }else if segue.identifier == "toKumamoto"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! KumamotoViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = kumamotoChoosenindexpath
         }else if segue.identifier == "toOita"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! OitaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = oitaChoosenindexpath
         }else if segue.identifier == "toMiyazaki"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! MiyazakiViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = miyazakiChoosenindexpath
         }else if segue.identifier == "toKagoshima"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! KagoshimaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = kagoshimaChoosenindexpath
         }else if segue.identifier == "toOkinawa"{
-            let nextVC = segue.destination as! MiyagiViewController
+            let nextVC = segue.destination as! OkinawaViewController
             nextVC.start = start
             nextVC.spots = spots
            
             //spots = [[String:Any]]()
-            nextVC.choosenindexpath = miyagichoosenindexpath
+            nextVC.choosenindexpath = okinawaChoosenindexpath
         }
     }
 

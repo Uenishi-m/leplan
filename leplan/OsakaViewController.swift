@@ -76,7 +76,7 @@ class OsakaViewController: UIViewController,UITableViewDelegate,UITableViewDataS
        if let controller = viewController as? PrefectureViewController{
            controller.spots = spots
            //spots = [[String:Any]]()
-           controller.miyagichoosenindexpath = choosenindexpath
+           controller.osakaChoosenindexpath = choosenindexpath
        }
    }
     

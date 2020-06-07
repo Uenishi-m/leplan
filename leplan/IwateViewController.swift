@@ -12,11 +12,13 @@ class IwateViewController:UIViewController,UITableViewDelegate,UITableViewDataSo
 
  private var myTableView:UITableView!
     
-    var regionlist = ["仙台市内","その他"]
-    var listfir = [["name":"仙台駅","latitude":38.2601316 ,"longitude":140.8802488],
-    ["name":"青葉城跡","latitude":38.252796,"longitude":140.8474116],
-    ["name":"瑞鳳殿","latitude":38.2504786,"longitude":140.8579106]]
-    var listsec = [["name":"松島","latitude":38.3680527,"longitude":141.0500819]]
+    var regionlist = ["宮古・岩泉・三陸","奥羽・遠野・花巻・平泉・一関","盛岡・雫石"]
+    var listfir = [["name":"龍泉洞","latitude":39.8525056 ,"longitude":141.7806956],
+    ["name":"浄土ヶ浜","latitude":39.6506445,"longitude":141.9419351],
+    ["name":"小袖海女センター","latitude":40.168458,"longitude":141.8502197],["name":"碁石海岸","latitude":38.9960756 ,"longitude":141.6910663]]
+    var listsec = [["name":"中尊寺金色堂","latitude":39.0015517,"longitude":141.0990601],["name":"毛越寺","latitude":38.9872123,"longitude":141.1053826],["name":"カッパ淵","latitude":39.3541007,"longitude":141.5683568],["name":"めがね橋","latitude":36.3580628,"longitude":138.6960949],["name":"厳美渓","latitude":38.9443232,"longitude":141.0458483],["name":"猊鼻渓","latitude":38.9670313,"longitude":141.0119618],["name":"宮沢賢治記念館","latitude":39.3992237,"longitude":141.1605169],["name":"歴史公園えさし藤原の郷","latitude":39.1963982,"longitude":141.1870371]]
+    var listthird = [["name":"小岩井農場","latitude":39.7534198,"longitude":140.9942699],["name":"岩手山","latitude":39.852681,"longitude":140.9660835],["name":"石割桜","latitude":39.7037901,"longitude":141.149048],["name":"マリオス展望台","latitude":39.7037901,"longitude":141.149048],["name":" 岩手銀行赤レンガ館","latitude":39.7037901,"longitude":141.149048]]
+    
     var label:[Bool] = []
     var listlist:[Int:[[String:Any]]] = [:]
     var choosenlable:[Bool] = []
@@ -31,7 +33,7 @@ class IwateViewController:UIViewController,UITableViewDelegate,UITableViewDataSo
         print("miyagistart\(start)")
         print("miyagispots\(spots)")
         
-        listlist = [0:listfir,1:listsec]
+        listlist = [0:listfir,1:listsec,2:listthird]
         
         for i in 0..<regionlist.count{
             label.append(false)
@@ -76,7 +78,7 @@ class IwateViewController:UIViewController,UITableViewDelegate,UITableViewDataSo
        if let controller = viewController as? PrefectureViewController{
            controller.spots = spots
            //spots = [[String:Any]]()
-           controller.miyagichoosenindexpath = choosenindexpath
+           controller.iwateChoosenindexpath = choosenindexpath
        }
    }
     
@@ -151,6 +153,8 @@ class IwateViewController:UIViewController,UITableViewDelegate,UITableViewDataSo
             return listfir.count
         }else if section == 1  && validsections.contains(section){
             return listsec.count
+        }else if section == 2  && validsections.contains(section){
+            return listthird.count
         }else{
             return 0
         }
@@ -172,6 +176,8 @@ class IwateViewController:UIViewController,UITableViewDelegate,UITableViewDataSo
             cell.textLabel?.text = listfir[indexPath.row]["name"] as? String
         }else if indexPath.section == 1 && validsections.contains(indexPath.section){
             cell.textLabel?.text = listsec[indexPath.row]["name"] as? String
+        }else if indexPath.section == 2 && validsections.contains(indexPath.section){
+            cell.textLabel?.text = listthird[indexPath.row]["name"] as? String
         }
        
         cell.backgroundColor=UIColor(red:248/255, green: 248/255, blue: 248/255, alpha: 1)

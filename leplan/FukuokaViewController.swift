@@ -76,7 +76,7 @@ class FukuokaViewController: UIViewController,UITableViewDelegate,UITableViewDat
        if let controller = viewController as? PrefectureViewController{
            controller.spots = spots
            //spots = [[String:Any]]()
-           controller.miyagichoosenindexpath = choosenindexpath
+           controller.fukuokaChoosenindexpath = choosenindexpath
        }
    }
     

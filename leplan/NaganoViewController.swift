@@ -76,7 +76,7 @@ class NaganoViewController: UIViewController,UITableViewDelegate,UITableViewData
        if let controller = viewController as? PrefectureViewController{
            controller.spots = spots
            //spots = [[String:Any]]()
-           controller.miyagichoosenindexpath = choosenindexpath
+           controller.naganoChoosenindexpath = choosenindexpath
        }
    }
     

@@ -76,7 +76,7 @@ class YamanashiViewController: UIViewController,UITableViewDelegate,UITableViewD
        if let controller = viewController as? PrefectureViewController{
            controller.spots = spots
            //spots = [[String:Any]]()
-           controller.miyagichoosenindexpath = choosenindexpath
+           controller.yamanashiChoosenindexpath = choosenindexpath
        }
    }
     

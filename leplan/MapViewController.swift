@@ -24,6 +24,7 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
     var newCoordinate:CLLocationCoordinate2D=CLLocationCoordinate2D()
     var routelist_fin=[MKRoute]()
     var annotationlist=[MKAnnotation]()
+    var new=[String:Any]()
     
     
     private let myMapView: MKMapView = MKMapView()
@@ -74,16 +75,24 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
         self.view.addSubview(myMapView)
         
         //Buttonの設定
-        myButton=UIButton(type: .detailDisclosure)
-        let width:CGFloat=150
-        let height:CGFloat=20
-        let x:CGFloat=self.view.bounds.width-width
-        let y:CGFloat=self.view.bounds.height-height*6
+        myButton=UIButton()
+        let width:Int=70
+        let height:Int=50
+        let x:Int=Int(self.view.bounds.width)-width
+        let y:Int=Int(self.view.bounds.height)-height*6
         
-        myButton.frame=CGRect(x: x, y: y, width: width, height: height)
-        myButton.setTitle("現在地を表示", for:.normal)
-        //myButton.backgroundColor=UIColor.white
+        //myButton.frame=CGRect(x: x, y: y, width: width, height: height)
+        myButton.frame = CGRect(x: Int(self.view.bounds.width)-100, y: Int(self.view.bounds.height)-30-70-height, width:width, height: height)
+        myButton.titleLabel?.numberOfLines = 0
+        myButton.titleLabel?.textAlignment = NSTextAlignment.center
+        myButton.titleLabel?.font = UIFont(name: "Avenir", size: 15.0)
+        myButton.setTitle("""
+現在地を
+表示
+""", for:.normal)
+        myButton.backgroundColor=UIColor.white
         myButton.setTitleColor(UIColor.gray, for: .normal)
+        
         myButton.addTarget(self, action: #selector(ClickButton), for: .touchUpInside)
         self.view.addSubview(myButton)
         self.view.bringSubviewToFront(myButton)
@@ -486,16 +495,25 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
                                 //self.start=["name":self.startingpoint,"latitude":self.startCoordinate.latitude,"longitude":self.startCoordinate.longitude]
                                 //newpin.coordinate=self.newCoordinate
                                 //self.myMapView.addAnnotation(newpin)
-                                var new=[String:Any]()
-                                new=["name":self.newdestination,"latitude":self.newCoordinate.latitude,"longitude":self.newCoordinate.longitude]
+                                //var new=[String:Any]()
+                                self.new=["name":self.newdestination,"latitude":self.newCoordinate.latitude,"longitude":self.newCoordinate.longitude]
+                                
                                 //listに新たな目的地を追加
-                                self.list.append(new)
+                                self.list.append(self.new)
                                 //既存のルートを削除
                                 self.remove(removeroutelist: self.routelist_fin)
                                 //新たにルートを描画
                                 self.Route(spotslist: self.list)
+                                
                             }
                         }
+            }
+            if self.new.isEmpty{
+                let alert = UIAlertController(title: "位置情報を取得できませんでした", message: nil, preferredStyle: .alert)
+                let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(OKAction)
+                //if list.count != record.count + 1{
+                self.present(alert,animated: true, completion: nil)
             }
         })
         mySearchBar.text=""
@@ -522,7 +540,9 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
     @objc func ClickButton(sender:UIButton){
         print("button clicked")
         
-       /* CLLocationManager.locationServicesEnabled()
+        CLLocationManager.locationServicesEnabled()
+        
+        myLocationManager = CLLocationManager()
         
         let status = CLLocationManager.authorizationStatus()
         
@@ -549,8 +569,9 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
         nowpin.coordinate=nowcoordinate
         nowpin.title="現在地"
         
+        
         myMapView.userTrackingMode=MKUserTrackingMode.follow
-        myMapView.userTrackingMode=MKUserTrackingMode.followWithHeading*/
+        myMapView.userTrackingMode=MKUserTrackingMode.followWithHeading
         
         
     }
@@ -575,16 +596,193 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
             previousViewController.choosenindexpath = []
             // viewControlllerAの処理
         }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? AomoriViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? AkitaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? YamagataViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? FukushimaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? IwateViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? IbaragiViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? GunmaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? SaitamaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? ChibaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? TokyoViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? KagawaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? NiigataViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? ToyamaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? IshikawaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? FukuiViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? YamanashiViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? NaganoViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? GifuViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? ShizuokaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? AichiViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? OsakaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? KyotoViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? HyogoViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? NaraViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? MieViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? ShigaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? WakayamaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? ShimaneViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? TtotoriViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? OkayamaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? HiroshimaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? YamaguchiViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? KagawaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? TokushimaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? EhimeViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? KochiViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? FukuokaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? SagaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? KumamotoViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? OitaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? MiyazakiViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? KagoshimaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        if let previousViewController = self.navigationController?.viewControllers[count] as? OkinawaViewController {
+        previousViewController.spots = [[String:Any]]()
+        previousViewController.choosenindexpath = []
+        }
+        
+        
+        
+        
+        // viewControlllerAの処理
         performSegue(withIdentifier: "mapToHome", sender: nil)
     }
     
     func alertsetting(){
-        let alert = UIAlertController(title: "経路を取得できませんでした", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: "位置情報を取得できませんでした", message: nil, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(OKAction)
-        if list.count != record.count + 1{
-            present(alert,animated: true)
-        }
+        //if list.count != record.count + 1{
+            present(alert,animated: true, completion: nil)
+       // }
     }
     
     
@@ -600,6 +798,7 @@ class MapViewController: UIViewController ,MKMapViewDelegate,CLLocationManagerDe
             
             nextVC.spots = list
             nextVC.records=record
+            
         }
     }
     

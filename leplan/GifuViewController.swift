@@ -76,7 +76,7 @@ class GifuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
        if let controller = viewController as? PrefectureViewController{
            controller.spots = spots
            //spots = [[String:Any]]()
-           controller.miyagichoosenindexpath = choosenindexpath
+           controller.gifuChoosenindexpath = choosenindexpath
        }
    }
     

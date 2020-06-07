@@ -12,11 +12,13 @@ class SaitamaViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
  private var myTableView:UITableView!
     
-    var regionlist = ["仙台市内","その他"]
-    var listfir = [["name":"仙台駅","latitude":38.2601316 ,"longitude":140.8802488],
-    ["name":"青葉城跡","latitude":38.252796,"longitude":140.8474116],
-    ["name":"瑞鳳殿","latitude":38.2504786,"longitude":140.8579106]]
-    var listsec = [["name":"松島","latitude":38.3680527,"longitude":141.0500819]]
+    var regionlist = ["さいたま市・川口市・鴻巣市","川越市・所沢市・飯能市・日高市","秩父市・長瀞町","行田市・幸手市・久喜市・白岡市"]
+    var listfir = [["name":"鉄道博物館","latitude":35.9208443 ,"longitude":139.6157429],
+    ["name":"盆栽美術館","latitude":35.9288245,"longitude":139.6306528],
+    ["name":"さいたまスタジアム2002公園","latitude":38.2504786,"longitude":140.8579106]]
+    var listsec = [["name":"小江戸川越","latitude":35.9205666,"longitude":139.4739919],["name":"川越氷川神社","latitude":35.927325,"longitude":139.4862973],["name":"高麗神社","latitude":35.8978898,"longitude":139.3211439],["name":"サイボクハム","latitude":35.8211571,"longitude":139.2696332],["name":"巾着田","latitude":35.8825239,"longitude":139.3083386],["name":"あけぼの子どもの森公園","latitude":35.8305813,"longitude":139.3421071],["name":"ーミンバレーパーク","latitude":35.8712837,"longitude":139.3305931],["name":"生活の木メディカルハーブ薬香草園","latitude":35.8442034,"longitude":139.3073193],["name":"トトロの森1号地","latitude":35.7658849,"longitude":139.3677883],["name":"西武ゆうえんち","latitude":35.7673439,"longitude":139.4405444],["name":"所沢航空記念公園","latitude":35.7981909,"longitude":139.4685404]]
+    var listthird = [["name":"長瀞ライン下り","latitude":36.0949792,"longitude":139.1085385],["name":"宝登山","latitude":36.0932244,"longitude":139.0567537],["name":"羊山公園","latitude":35.986768,"longitude":139.0872756],["name":"秩父ミューズパーク","latitude":35.9935654,"longitude":139.0497663],["name":"三十槌の氷柱","latitude":35.9450111,"longitude":138.92404]]
+    var listforth = [["name":"権現堂堤","latitude":36.0907768,"longitude":139.7216179],["name":"東武動物公園","latitude":36.0231628,"longitude":139.6943048],]
     var label:[Bool] = []
     var listlist:[Int:[[String:Any]]] = [:]
     var choosenlable:[Bool] = []
@@ -31,7 +33,7 @@ class SaitamaViewController: UIViewController,UITableViewDelegate,UITableViewDat
         print("miyagistart\(start)")
         print("miyagispots\(spots)")
         
-        listlist = [0:listfir,1:listsec]
+        listlist = [0:listfir,1:listsec,2:listthird,3:listforth]
         
         for i in 0..<regionlist.count{
             label.append(false)
@@ -75,8 +77,9 @@ class SaitamaViewController: UIViewController,UITableViewDelegate,UITableViewDat
    func navigationController(_ navigationController:UINavigationController,willShow viewController : UIViewController,animated:Bool){
        if let controller = viewController as? PrefectureViewController{
            controller.spots = spots
-           //spots = [[String:Any]]()
-           controller.miyagichoosenindexpath = choosenindexpath
+           spots = [[String:Any]]()
+           controller.saitamaChoosenindexpath = choosenindexpath
+           choosenindexpath = []
        }
    }
     
@@ -151,6 +154,10 @@ class SaitamaViewController: UIViewController,UITableViewDelegate,UITableViewDat
             return listfir.count
         }else if section == 1  && validsections.contains(section){
             return listsec.count
+        }else if section == 2  && validsections.contains(section){
+            return listthird.count
+        }else if section == 3  && validsections.contains(section){
+            return listforth.count
         }else{
             return 0
         }
@@ -172,6 +179,10 @@ class SaitamaViewController: UIViewController,UITableViewDelegate,UITableViewDat
             cell.textLabel?.text = listfir[indexPath.row]["name"] as? String
         }else if indexPath.section == 1 && validsections.contains(indexPath.section){
             cell.textLabel?.text = listsec[indexPath.row]["name"] as? String
+        }else if indexPath.section == 2 && validsections.contains(indexPath.section){
+            cell.textLabel?.text = listthird[indexPath.row]["name"] as? String
+        }else if indexPath.section == 3 && validsections.contains(indexPath.section){
+            cell.textLabel?.text = listforth[indexPath.row]["name"] as? String
         }
        
         cell.backgroundColor=UIColor(red:248/255, green: 248/255, blue: 248/255, alpha: 1)

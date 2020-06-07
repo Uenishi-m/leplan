@@ -12,11 +12,15 @@ class AkitaViewController: UIViewController,UITableViewDelegate,UITableViewDataS
 
  private var myTableView:UITableView!
     
-    var regionlist = ["仙台市内","その他"]
-    var listfir = [["name":"仙台駅","latitude":38.2601316 ,"longitude":140.8802488],
-    ["name":"青葉城跡","latitude":38.252796,"longitude":140.8474116],
-    ["name":"瑞鳳殿","latitude":38.2504786,"longitude":140.8579106]]
-    var listsec = [["name":"松島","latitude":38.3680527,"longitude":141.0500819]]
+    var regionlist = ["男鹿・能代・大館・鹿角","秋田・由利本荘・にかほ","仙北、田沢湖、角館、湯沢"]
+    var listfir = [["name":"男鹿真山伝承館","latitude":39.9291884 ,"longitude":139.76441],
+    ["name":"八幡平の後生掛自然研究路","latitude":39.9770555,"longitude":140.7943555],
+    ["name":"大館・小坂鉄道レールバイク","latitude":40.2904897,"longitude":140.6298009],
+    ["name":"男鹿水族館GAO","latitude":39.9421821,"longitude":139.7024067],
+    ["name":"大館・小坂鉄道レールバイク","latitude":40.2904897,"longitude":140.6298009],
+    ["name":"寒風山回転展望台","latitude":39.9339923,"longitude":139.8732382]]
+    var listsec = [["name":"秋田市大森山動物園 ～あきぎんオモリンの森～","latitude":39.6711631,"longitude":140.071847],["name":"法体の滝","latitude":39.1079405,"longitude":140.1570803],["name":"天然記念物「象潟」九十九島","latitude":39.2198223,"longitude":139.9047303],["name":"ポートタワーセリオン","latitude":39.7525681,"longitude":140.0589573],["name":"秋田国際ダリア園","latitude":39.5953638,"longitude":140.1849907],["name":"秋田県立美術館","latitude":39.7173697,"longitude":140.1193726]]
+    var listthird = [["name":"小安峡","latitude":39.0064699,"longitude":140.6625228],["name":"田沢湖","latitude":39.7247721,"longitude":140.6289089],["name":"角館武家屋敷","latitude":39.5979524,"longitude":140.559985],["name":"玉川温泉","latitude":39.9630556,"longitude":140.6812025],["name":"山のはちみつ屋","latitude":39.7198818,"longitude":140.6837569]]
     var label:[Bool] = []
     var listlist:[Int:[[String:Any]]] = [:]
     var choosenlable:[Bool] = []
@@ -31,7 +35,7 @@ class AkitaViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         print("miyagistart\(start)")
         print("miyagispots\(spots)")
         
-        listlist = [0:listfir,1:listsec]
+        listlist = [0:listfir,1:listsec,3:listthird]
         
         for i in 0..<regionlist.count{
             label.append(false)
@@ -75,8 +79,9 @@ class AkitaViewController: UIViewController,UITableViewDelegate,UITableViewDataS
    func navigationController(_ navigationController:UINavigationController,willShow viewController : UIViewController,animated:Bool){
        if let controller = viewController as? PrefectureViewController{
            controller.spots = spots
-           //spots = [[String:Any]]()
-           controller.miyagichoosenindexpath = choosenindexpath
+           spots = [[String:Any]]()
+           controller.akitaChoosenindexpath = choosenindexpath
+           choosenindexpath = []
        }
    }
     
@@ -151,6 +156,8 @@ class AkitaViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             return listfir.count
         }else if section == 1  && validsections.contains(section){
             return listsec.count
+        }else if section == 2 && validsections.contains(section){
+            return listthird.count
         }else{
             return 0
         }
@@ -172,6 +179,8 @@ class AkitaViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             cell.textLabel?.text = listfir[indexPath.row]["name"] as? String
         }else if indexPath.section == 1 && validsections.contains(indexPath.section){
             cell.textLabel?.text = listsec[indexPath.row]["name"] as? String
+        }else if indexPath.section == 2 && validsections.contains(indexPath.section){
+            cell.textLabel?.text = listthird[indexPath.row]["name"] as? String
         }
        
         cell.backgroundColor=UIColor(red:248/255, green: 248/255, blue: 248/255, alpha: 1)

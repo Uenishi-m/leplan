@@ -92,8 +92,9 @@ class HokkaidoViewController: UIViewController,UITableViewDelegate,UITableViewDa
     func navigationController(_ navigationController:UINavigationController,willShow viewController : UIViewController,animated:Bool){
         if let controller = viewController as? PrefectureViewController{
             controller.spots = spots
-            //spots = [[String:Any]]()
+            spots = [[String:Any]]()
             controller.hokkaidochoosenindexpath = choosenindexpath
+            choosenindexpath = []
         }
     }
     

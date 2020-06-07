@@ -12,11 +12,11 @@ class IbaragiViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
  private var myTableView:UITableView!
     
-    var regionlist = ["仙台市内","その他"]
-    var listfir = [["name":"仙台駅","latitude":38.2601316 ,"longitude":140.8802488],
-    ["name":"青葉城跡","latitude":38.252796,"longitude":140.8474116],
-    ["name":"瑞鳳殿","latitude":38.2504786,"longitude":140.8579106]]
-    var listsec = [["name":"松島","latitude":38.3680527,"longitude":141.0500819]]
+    var regionlist = [""]
+    var listfir = [["name":"竜神大吊橋","latitude":36.6828573 ,"longitude":140.4639862],
+    ["name":"袋田の滝","latitude":36.7645529,"longitude":140.4050133],
+    ["name":"茨城アサヒビール工場","latitude":35.9514854,"longitude":139.9656471],["name":"シャトーカミヤ","latitude":35.9775824,"longitude":140.2180715],["name":"牛久大仏","latitude":35.9826928,"longitude":141.0500819],["name":"国営ひたち海浜公園","latitude":36.4034211,"longitude":140.5959035],["name":"筑波山","latitude":36.2254393,"longitude":140.0725584],["name":"偕楽園","latitude":36.3726306,"longitude":140.4499932],["name":"日立駅","latitude":36.5908269,"longitude":140.6556598],["name":"大洗海岸","latitude":36.3139893,"longitude":140.5484971],["name":"かねふく 明太パーク大洗","latitude":36.3115146,"longitude":140.575887,],["name":"宇宙航空研究開発機構筑波宇宙センター","latitude":36.0655867,"longitude":140.1259232],["name":"つくばわんわんランド","latitude":36.2036856,"longitude":140.0730232],["name":"アクアワールド茨城県大洗水族館","latitude":36.3324113,"longitude":140.5917431],["name":"笠間美術の森公園","latitude":36.3720153,"longitude":140.2640683]]
+    var listsec = [["name":"松島","latitude":38.3680527,"longitude":141.0500819],]
     var label:[Bool] = []
     var listlist:[Int:[[String:Any]]] = [:]
     var choosenlable:[Bool] = []
@@ -31,7 +31,7 @@ class IbaragiViewController: UIViewController,UITableViewDelegate,UITableViewDat
         print("miyagistart\(start)")
         print("miyagispots\(spots)")
         
-        listlist = [0:listfir,1:listsec]
+        listlist = [0:listfir]
         
         for i in 0..<regionlist.count{
             label.append(false)
@@ -75,8 +75,9 @@ class IbaragiViewController: UIViewController,UITableViewDelegate,UITableViewDat
    func navigationController(_ navigationController:UINavigationController,willShow viewController : UIViewController,animated:Bool){
        if let controller = viewController as? PrefectureViewController{
            controller.spots = spots
-           //spots = [[String:Any]]()
-           controller.miyagichoosenindexpath = choosenindexpath
+           spots = [[String:Any]]()
+           controller.ibaragiChoosenindexpath = choosenindexpath
+        choosenindexpath = []
        }
    }
     
@@ -147,11 +148,11 @@ class IbaragiViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if section == 0 && validsections.contains(section){
+        if section == 0 /*&& validsections.contains(section)*/{
             return listfir.count
-        }else if section == 1  && validsections.contains(section){
+        }/*else if section == 1  && validsections.contains(section){
             return listsec.count
-        }else{
+        }*/else{
             return 0
         }
         
@@ -168,11 +169,11 @@ class IbaragiViewController: UIViewController,UITableViewDelegate,UITableViewDat
            cell.accessoryType = .none
        }
         
-        if indexPath.section == 0  && validsections.contains(indexPath.section){
+        if indexPath.section == 0 /* && validsections.contains(indexPath.section)*/{
             cell.textLabel?.text = listfir[indexPath.row]["name"] as? String
-        }else if indexPath.section == 1 && validsections.contains(indexPath.section){
+        }/*else if indexPath.section == 1 && validsections.contains(indexPath.section){
             cell.textLabel?.text = listsec[indexPath.row]["name"] as? String
-        }
+        }*/
        
         cell.backgroundColor=UIColor(red:248/255, green: 248/255, blue: 248/255, alpha: 1)
         cell.textLabel!.font = UIFont(name: "Avenir", size: 20.0)
